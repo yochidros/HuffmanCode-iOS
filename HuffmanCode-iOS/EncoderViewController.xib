@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+        <array key="HiraginoKakuGothic.ttc">
+            <string>HiraginoSans-W6</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EncoderViewController" customModule="HuffmanCode_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="resultLabel" destination="iMR-m4-5eX" id="QAg-7a-sdh"/>
+                <outlet property="textField" destination="NPe-TB-gfq" id="KYK-6o-gLf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please input string" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YO-b6-nTv">
+                    <rect key="frame" x="107" y="70" width="161.5" height="16"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3o1-ws-iyR" customClass="Button" customModule="HuffmanCode_iOS" customModuleProvider="target">
+                    <rect key="frame" x="88" y="211" width="200" height="48"/>
+                    <color key="backgroundColor" red="0.30269136520000001" green="1" blue="0.22759069400000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="Daf-7B-eh3"/>
+                        <constraint firstAttribute="height" constant="48" id="yRo-F7-u4x"/>
+                    </constraints>
+                    <state key="normal" title="Encode">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didSelectEncode:" destination="-1" eventType="touchUpInside" id="sfK-oP-mbl"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NPe-TB-gfq">
+                    <rect key="frame" x="88" y="148" width="200" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="bg0-c8-kfA"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMR-m4-5eX">
+                    <rect key="frame" x="88" y="315" width="200" height="0.0"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="4KZ-3Z-24S"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5YO-b6-nTv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="5ZW-jK-ZVe"/>
+                <constraint firstItem="iMR-m4-5eX" firstAttribute="centerX" secondItem="3o1-ws-iyR" secondAttribute="centerX" id="6p5-G6-Tr4"/>
+                <constraint firstItem="5YO-b6-nTv" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="OS9-dM-VgE"/>
+                <constraint firstItem="NPe-TB-gfq" firstAttribute="centerX" secondItem="5YO-b6-nTv" secondAttribute="centerX" id="hI9-8m-8Cj"/>
+                <constraint firstItem="3o1-ws-iyR" firstAttribute="centerX" secondItem="NPe-TB-gfq" secondAttribute="centerX" id="mpq-5v-sf2"/>
+                <constraint firstItem="NPe-TB-gfq" firstAttribute="top" secondItem="5YO-b6-nTv" secondAttribute="bottom" constant="62" id="oeU-0B-m5B"/>
+                <constraint firstItem="iMR-m4-5eX" firstAttribute="top" secondItem="3o1-ws-iyR" secondAttribute="bottom" constant="56" id="xm0-xF-FAi"/>
+                <constraint firstItem="3o1-ws-iyR" firstAttribute="top" secondItem="NPe-TB-gfq" secondAttribute="bottom" constant="41" id="zgG-6c-qjN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

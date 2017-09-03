@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoKakuGothic.ttc">
+            <string>HiraginoSans-W6</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController" customModule="HuffmanCode_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="assertLabel" destination="u0V-vw-38y" id="swT-Kv-hGE"/>
+                <outlet property="nextButton" destination="AOr-YC-VdC" id="ZNI-dD-2st"/>
+                <outlet property="textField" destination="M5n-gb-5C4" id="KWF-6m-DNr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please input number of characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OK-ed-N7N">
+                    <rect key="frame" x="38" y="123" width="300.5" height="16"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0V-vw-38y">
+                    <rect key="frame" x="187" y="273" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M5n-gb-5C4">
+                    <rect key="frame" x="97.5" y="205" width="180" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="Vcx-KG-NWy"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <connections>
+                        <action selector="textFieldEditing:" destination="-1" eventType="editingChanged" id="mEU-Nl-RYC"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOr-YC-VdC" customClass="Button" customModule="HuffmanCode_iOS" customModuleProvider="target">
+                    <rect key="frame" x="88" y="439" width="200" height="48"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="c2y-N6-GwX"/>
+                        <constraint firstAttribute="width" constant="200" id="egU-Fp-bMG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="18"/>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didSelectNext" destination="-1" eventType="touchUpInside" id="dm6-rN-De5"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="u0V-vw-38y" firstAttribute="centerX" secondItem="M5n-gb-5C4" secondAttribute="centerX" id="3qy-7R-fRy"/>
+                <constraint firstItem="u0V-vw-38y" firstAttribute="top" secondItem="M5n-gb-5C4" secondAttribute="bottom" constant="46" id="5pq-qo-Zp4"/>
+                <constraint firstItem="7OK-ed-N7N" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="103" id="5wh-Ab-ZUl"/>
+                <constraint firstItem="M5n-gb-5C4" firstAttribute="centerX" secondItem="7OK-ed-N7N" secondAttribute="centerX" id="GdK-DH-l8F"/>
+                <constraint firstItem="AOr-YC-VdC" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="IJh-Jg-G59"/>
+                <constraint firstItem="M5n-gb-5C4" firstAttribute="top" secondItem="7OK-ed-N7N" secondAttribute="bottom" constant="66" id="diZ-ZT-Fvz"/>
+                <constraint firstItem="7OK-ed-N7N" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="eJo-eL-lc5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="AOr-YC-VdC" secondAttribute="bottom" constant="180" id="px6-kB-umi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
