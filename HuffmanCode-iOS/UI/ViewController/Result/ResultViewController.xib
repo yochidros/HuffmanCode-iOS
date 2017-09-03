@@ -9,14 +9,10 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HiraginoKakuGothic.ttc">
-            <string>HiraginoSans-W6</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultViewController" customModule="HuffmanCode_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="dX8-F4-ljy" id="qoT-iL-8ba"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,41 +21,71 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFl-PR-hTW" customClass="Button" customModule="HuffmanCode_iOS" customModuleProvider="target">
-                    <rect key="frame" x="87" y="532" width="200" height="48"/>
-                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QXh-Ff-yqw">
+                    <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jl3-b1-cr5">
+                            <rect key="frame" x="144.5" y="19.5" width="85" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="Hhc-TA-vuL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HuffmanCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nN1-Vr-TvM">
+                            <rect key="frame" x="249.5" y="20" width="110" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="110" id="ykQ-JO-z6P"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYx-Td-Jum">
+                            <rect key="frame" x="39.5" y="19.5" width="85" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="85" id="uVg-9F-PDG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="200" id="OGf-Rf-eIf"/>
-                        <constraint firstAttribute="height" constant="48" id="Vvr-k6-wmP"/>
+                        <constraint firstItem="Jl3-b1-cr5" firstAttribute="leading" secondItem="mYx-Td-Jum" secondAttribute="trailing" constant="20" id="Mro-Hk-VxE"/>
+                        <constraint firstItem="Jl3-b1-cr5" firstAttribute="centerY" secondItem="QXh-Ff-yqw" secondAttribute="centerY" id="OM5-ZY-hTz"/>
+                        <constraint firstItem="Jl3-b1-cr5" firstAttribute="centerX" secondItem="QXh-Ff-yqw" secondAttribute="centerX" id="Rp0-Dq-di2"/>
+                        <constraint firstItem="nN1-Vr-TvM" firstAttribute="centerY" secondItem="QXh-Ff-yqw" secondAttribute="centerY" id="WaZ-46-SMG"/>
+                        <constraint firstItem="mYx-Td-Jum" firstAttribute="centerY" secondItem="QXh-Ff-yqw" secondAttribute="centerY" id="di7-aG-QhY"/>
+                        <constraint firstAttribute="height" constant="60" id="ibp-yl-72g"/>
+                        <constraint firstItem="nN1-Vr-TvM" firstAttribute="leading" secondItem="Jl3-b1-cr5" secondAttribute="trailing" constant="20" id="zpg-yd-jVh"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="18"/>
-                    <state key="normal" title="Close">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="24"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="didSelectClose:" destination="-1" eventType="touchUpInside" id="XX9-bn-OQS"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1C-sp-omo">
-                    <rect key="frame" x="145" y="437" width="84" height="30"/>
-                    <state key="normal" title="Show Image"/>
-                    <connections>
-                        <action selector="didSelectShowImage:" destination="-1" eventType="touchUpInside" id="5g9-Ia-gf0"/>
-                    </connections>
-                </button>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dX8-F4-ljy" customClass="ResultCollectionView" customModule="HuffmanCode_iOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="124" width="375" height="543"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nqZ-2S-jzy">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="NFl-PR-hTW" firstAttribute="top" secondItem="k1C-sp-omo" secondAttribute="bottom" constant="65" id="E2g-9H-gYV"/>
-                <constraint firstItem="k1C-sp-omo" firstAttribute="centerX" secondItem="NFl-PR-hTW" secondAttribute="centerX" id="WN0-5N-4Uk"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NFl-PR-hTW" secondAttribute="bottom" constant="87" id="aQe-8J-otl"/>
-                <constraint firstItem="NFl-PR-hTW" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="eCX-7z-01v"/>
+                <constraint firstItem="QXh-Ff-yqw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="02J-oL-Uzf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dX8-F4-ljy" secondAttribute="trailing" id="43B-eA-Qc9"/>
+                <constraint firstItem="dX8-F4-ljy" firstAttribute="top" secondItem="QXh-Ff-yqw" secondAttribute="bottom" id="6ep-mZ-r3o"/>
+                <constraint firstItem="dX8-F4-ljy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GKI-db-fiC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QXh-Ff-yqw" secondAttribute="trailing" id="IyC-gq-WAw"/>
+                <constraint firstItem="dX8-F4-ljy" firstAttribute="top" secondItem="QXh-Ff-yqw" secondAttribute="bottom" id="Loq-1f-8ZP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dX8-F4-ljy" secondAttribute="bottom" id="MLf-LW-CbL"/>
+                <constraint firstItem="QXh-Ff-yqw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZMd-kw-6ws"/>
             </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>

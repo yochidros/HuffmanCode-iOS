@@ -14,17 +14,30 @@ class ResultViewController: UIViewController {
             huffmanCode.buildTree(freqs: data ?? [:]).printCodes()
         }
     }
+    @IBOutlet weak var collectionView: ResultCollectionView!
     var huffmanCode: HuffmanCode = HuffmanCode()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Result"
+        collectionView.data = data ?? [:]
+        collectionView.huffman = self.huffmanCode
+        collectionView.contentsDelegate = self
     }
 
-    @IBAction func didSelectShowImage(_ sender: Any) {
-        self.transition(to: DestinationEncoderView())
-    }
-    @IBAction func didSelectClose(_ sender: Any) {
-        self.transition(to: DestinationDecoderView(huffmanData: self.huffmanCode, data: self.data ?? [:]))
+}
+
+extension ResultViewController: ContentsViewDelegate  {
+    func contentsView(_ view: UICollectionViewCell, onEvent: ResultToolsEvent) {
+        switch onEvent {
+        case .image:
+            self.transition(to: DestinationImageView())
+        case .decode:
+            self.transition(to: DestinationDecoderView(huffmanData: self.huffmanCode, data: self.data ?? [:]))
+        case .encode:
+            self.transition(to: DestinationEncoderView())
+        case .close:
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
 }

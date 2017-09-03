@@ -39,6 +39,11 @@
 		71A7A3EB1F5ABFD000A22496 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A7A3EA1F5ABFD000A22496 /* UITextFieldExtension.swift */; };
 		71A7A3EF1F5AC04600A22496 /* InputDatasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A7A3ED1F5AC04600A22496 /* InputDatasCollectionViewCell.swift */; };
 		71A7A3F01F5AC04600A22496 /* InputDatasCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71A7A3EE1F5AC04600A22496 /* InputDatasCollectionViewCell.xib */; };
+		71B77FCD1F5C2E2700E4C80B /* ResultCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B77FCC1F5C2E2700E4C80B /* ResultCollectionView.swift */; };
+		71B77FD11F5C2EB400E4C80B /* ResultContentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B77FCF1F5C2EB400E4C80B /* ResultContentsCollectionViewCell.swift */; };
+		71B77FD21F5C2EB400E4C80B /* ResultContentsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B77FD01F5C2EB400E4C80B /* ResultContentsCollectionViewCell.xib */; };
+		71B77FD51F5C330300E4C80B /* ResultToolsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B77FD31F5C330300E4C80B /* ResultToolsCollectionViewCell.swift */; };
+		71B77FD61F5C330300E4C80B /* ResultToolsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B77FD41F5C330300E4C80B /* ResultToolsCollectionViewCell.xib */; };
 		71DCA89B1F5AD50100894BA3 /* InputDatasAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89A1F5AD50100894BA3 /* InputDatasAction.swift */; };
 		71DCA89D1F5AE17800894BA3 /* DestinationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89C1F5AE17800894BA3 /* DestinationResultView.swift */; };
 		71DCA8A01F5AE44800894BA3 /* Huffman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89F1F5AE44800894BA3 /* Huffman.swift */; };
@@ -79,6 +84,11 @@
 		71A7A3EA1F5ABFD000A22496 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		71A7A3ED1F5AC04600A22496 /* InputDatasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDatasCollectionViewCell.swift; sourceTree = "<group>"; };
 		71A7A3EE1F5AC04600A22496 /* InputDatasCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputDatasCollectionViewCell.xib; sourceTree = "<group>"; };
+		71B77FCC1F5C2E2700E4C80B /* ResultCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCollectionView.swift; sourceTree = "<group>"; };
+		71B77FCF1F5C2EB400E4C80B /* ResultContentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultContentsCollectionViewCell.swift; sourceTree = "<group>"; };
+		71B77FD01F5C2EB400E4C80B /* ResultContentsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultContentsCollectionViewCell.xib; sourceTree = "<group>"; };
+		71B77FD31F5C330300E4C80B /* ResultToolsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultToolsCollectionViewCell.swift; sourceTree = "<group>"; };
+		71B77FD41F5C330300E4C80B /* ResultToolsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultToolsCollectionViewCell.xib; sourceTree = "<group>"; };
 		71DCA89A1F5AD50100894BA3 /* InputDatasAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDatasAction.swift; sourceTree = "<group>"; };
 		71DCA89C1F5AE17800894BA3 /* DestinationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationResultView.swift; sourceTree = "<group>"; };
 		71DCA89F1F5AE44800894BA3 /* Huffman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huffman.swift; sourceTree = "<group>"; };
@@ -101,7 +111,6 @@
 				7146943C1F5AEB46007E2555 /* EncoderViewController.swift */,
 				7146943D1F5AEB46007E2555 /* EncoderViewController.xib */,
 			);
-			name = Encoder;
 			path = Encoder;
 			sourceTree = "<group>";
 		};
@@ -111,7 +120,6 @@
 				714694381F5AEB29007E2555 /* DecoderViewController.swift */,
 				714694391F5AEB29007E2555 /* DecoderViewController.xib */,
 			);
-			name = Decoder;
 			path = Decoder;
 			sourceTree = "<group>";
 		};
@@ -121,7 +129,6 @@
 				7175EF581F5AA8D6007A73AF /* Destinations */,
 				7175EF561F5AA743007A73AF /* Transition.swift */,
 			);
-			name = Transition;
 			path = Transition;
 			sourceTree = "<group>";
 		};
@@ -135,7 +142,6 @@
 				71A7A3E11F5ABD0C00A22496 /* DestinationInputDatasView.swift */,
 				71DCA89C1F5AE17800894BA3 /* DestinationResultView.swift */,
 			);
-			name = Destinations;
 			path = Destinations;
 			sourceTree = "<group>";
 		};
@@ -176,7 +182,6 @@
 				7175EF551F5AA733007A73AF /* Transition */,
 				719B66601F5AA0D9007BA408 /* ViewController */,
 			);
-			name = UI;
 			path = UI;
 			sourceTree = "<group>";
 		};
@@ -189,7 +194,6 @@
 				7175EF531F5AA40C007A73AF /* UIViewControllerExtension.swift */,
 				7175EF511F5AA397007A73AF /* UIViewExtension.swift */,
 			);
-			name = Extension;
 			path = Extension;
 			sourceTree = "<group>";
 		};
@@ -204,7 +208,6 @@
 				719B66651F5AA1E7007BA408 /* Result */,
 				719B66631F5AA1B0007BA408 /* Top */,
 			);
-			name = ViewController;
 			path = ViewController;
 			sourceTree = "<group>";
 		};
@@ -214,7 +217,6 @@
 				7175EF611F5AABDF007A73AF /* FirstViewController.swift */,
 				7175EF621F5AABDF007A73AF /* FirstViewController.xib */,
 			);
-			name = First;
 			path = First;
 			sourceTree = "<group>";
 		};
@@ -223,7 +225,6 @@
 			children = (
 				7175EF5F1F5AAAB5007A73AF /* Button.swift */,
 			);
-			name = Component;
 			path = Component;
 			sourceTree = "<group>";
 		};
@@ -233,7 +234,6 @@
 				719B66501F5AA0B3007BA408 /* Main.storyboard */,
 				719B664E1F5AA0B3007BA408 /* ViewController.swift */,
 			);
-			name = Top;
 			path = Top;
 			sourceTree = "<group>";
 		};
@@ -244,17 +244,17 @@
 				71A7A3DD1F5ABCDD00A22496 /* InputDatasViewController.swift */,
 				71A7A3DE1F5ABCDD00A22496 /* InputDatasViewController.xib */,
 			);
-			name = InputDatas;
 			path = InputDatas;
 			sourceTree = "<group>";
 		};
 		719B66651F5AA1E7007BA408 /* Result */ = {
 			isa = PBXGroup;
 			children = (
+				71B77FCE1F5C2E8500E4C80B /* Cells */,
+				71B77FCC1F5C2E2700E4C80B /* ResultCollectionView.swift */,
 				7175EF5B1F5AAAA7007A73AF /* ResultViewController.swift */,
 				7175EF5C1F5AAAA7007A73AF /* ResultViewController.xib */,
 			);
-			name = Result;
 			path = Result;
 			sourceTree = "<group>";
 		};
@@ -264,7 +264,6 @@
 				719B66671F5AA210007BA408 /* ImageViewController.swift */,
 				719B66681F5AA210007BA408 /* ImageViewController.xib */,
 			);
-			name = Image;
 			path = Image;
 			sourceTree = "<group>";
 		};
@@ -275,7 +274,6 @@
 				71DCA89A1F5AD50100894BA3 /* InputDatasAction.swift */,
 				71A7A3E41F5ABEB800A22496 /* InputDatasCollectionView.swift */,
 			);
-			name = Contents;
 			path = Contents;
 			sourceTree = "<group>";
 		};
@@ -285,8 +283,18 @@
 				71A7A3ED1F5AC04600A22496 /* InputDatasCollectionViewCell.swift */,
 				71A7A3EE1F5AC04600A22496 /* InputDatasCollectionViewCell.xib */,
 			);
-			name = Cell;
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		71B77FCE1F5C2E8500E4C80B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				71B77FCF1F5C2EB400E4C80B /* ResultContentsCollectionViewCell.swift */,
+				71B77FD01F5C2EB400E4C80B /* ResultContentsCollectionViewCell.xib */,
+				71B77FD31F5C330300E4C80B /* ResultToolsCollectionViewCell.swift */,
+				71B77FD41F5C330300E4C80B /* ResultToolsCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		71DCA89E1F5AE43700894BA3 /* Huffman */ = {
@@ -294,7 +302,6 @@
 			children = (
 				71DCA89F1F5AE44800894BA3 /* Huffman.swift */,
 			);
-			name = Huffman;
 			path = Huffman;
 			sourceTree = "<group>";
 		};
@@ -365,8 +372,10 @@
 				71A7A3F01F5AC04600A22496 /* InputDatasCollectionViewCell.xib in Resources */,
 				719B66541F5AA0B3007BA408 /* Assets.xcassets in Resources */,
 				71A7A3E01F5ABCDD00A22496 /* InputDatasViewController.xib in Resources */,
+				71B77FD61F5C330300E4C80B /* ResultToolsCollectionViewCell.xib in Resources */,
 				719B666A1F5AA210007BA408 /* ImageViewController.xib in Resources */,
 				7175EF5E1F5AAAA7007A73AF /* ResultViewController.xib in Resources */,
+				71B77FD21F5C2EB400E4C80B /* ResultContentsCollectionViewCell.xib in Resources */,
 				719B66521F5AA0B3007BA408 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,14 +388,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				714694451F5B08B6007E2555 /* DestinationDecoderView.swift in Sources */,
+				71B77FD11F5C2EB400E4C80B /* ResultContentsCollectionViewCell.swift in Sources */,
 				71A7A3E21F5ABD0C00A22496 /* DestinationInputDatasView.swift in Sources */,
 				71A7A3E51F5ABEB800A22496 /* InputDatasCollectionView.swift in Sources */,
 				7175EF571F5AA743007A73AF /* Transition.swift in Sources */,
+				71B77FD51F5C330300E4C80B /* ResultToolsCollectionViewCell.swift in Sources */,
 				71A7A3EF1F5AC04600A22496 /* InputDatasCollectionViewCell.swift in Sources */,
 				7175EF521F5AA397007A73AF /* UIViewExtension.swift in Sources */,
 				719B664F1F5AA0B3007BA408 /* ViewController.swift in Sources */,
 				71A7A3EB1F5ABFD000A22496 /* UITextFieldExtension.swift in Sources */,
 				7175EF541F5AA40C007A73AF /* UIViewControllerExtension.swift in Sources */,
+				71B77FCD1F5C2E2700E4C80B /* ResultCollectionView.swift in Sources */,
 				7146943E1F5AEB46007E2555 /* EncoderViewController.swift in Sources */,
 				719B66691F5AA210007BA408 /* ImageViewController.swift in Sources */,
 				7175EF601F5AAAB5007A73AF /* Button.swift in Sources */,
