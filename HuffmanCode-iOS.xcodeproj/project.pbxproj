@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		713F023D1F640907002F78C1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F023C1F640907002F78C1 /* API.swift */; };
 		7146943A1F5AEB29007E2555 /* DecoderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714694381F5AEB29007E2555 /* DecoderViewController.swift */; };
 		7146943B1F5AEB29007E2555 /* DecoderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 714694391F5AEB29007E2555 /* DecoderViewController.xib */; };
 		7146943E1F5AEB46007E2555 /* EncoderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7146943C1F5AEB46007E2555 /* EncoderViewController.swift */; };
@@ -47,6 +48,7 @@
 		71DCA89B1F5AD50100894BA3 /* InputDatasAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89A1F5AD50100894BA3 /* InputDatasAction.swift */; };
 		71DCA89D1F5AE17800894BA3 /* DestinationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89C1F5AE17800894BA3 /* DestinationResultView.swift */; };
 		71DCA8A01F5AE44800894BA3 /* Huffman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89F1F5AE44800894BA3 /* Huffman.swift */; };
+		774D374AE8B5DB9026B1F919 /* Pods_HuffmanCode_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C3FBEF395073E92539F75B /* Pods_HuffmanCode_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +65,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		27CCD88E94EBBB1D29CD1E5E /* Pods-HuffmanCode-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuffmanCode-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HuffmanCode-iOS/Pods-HuffmanCode-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		67C3FBEF395073E92539F75B /* Pods_HuffmanCode_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HuffmanCode_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		713F023C1F640907002F78C1 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		714694381F5AEB29007E2555 /* DecoderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderViewController.swift; sourceTree = "<group>"; };
 		714694391F5AEB29007E2555 /* DecoderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DecoderViewController.xib; sourceTree = "<group>"; };
 		7146943C1F5AEB46007E2555 /* EncoderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoderViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +110,7 @@
 		71DCA89A1F5AD50100894BA3 /* InputDatasAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDatasAction.swift; sourceTree = "<group>"; };
 		71DCA89C1F5AE17800894BA3 /* DestinationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationResultView.swift; sourceTree = "<group>"; };
 		71DCA89F1F5AE44800894BA3 /* Huffman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huffman.swift; sourceTree = "<group>"; };
+		EC30CEC045AAE5F9945E308E /* Pods-HuffmanCode-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuffmanCode-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuffmanCode-iOS/Pods-HuffmanCode-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +118,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				774D374AE8B5DB9026B1F919 /* Pods_HuffmanCode_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		713F023B1F6408F9002F78C1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				713F023C1F640907002F78C1 /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		714694361F5AEAF4007E2555 /* Encoder */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +178,8 @@
 			children = (
 				719B664B1F5AA0B3007BA408 /* HuffmanCode-iOS */,
 				719B664A1F5AA0B3007BA408 /* Products */,
+				CE73A3317CECB82070AD608F /* Pods */,
+				C92B6711D446649D28B7D1B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +206,7 @@
 		719B665E1F5AA0C3007BA408 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				713F023B1F6408F9002F78C1 /* API */,
 				719B66621F5AA101007BA408 /* Component */,
 				719B665F1F5AA0D4007BA408 /* Extension */,
 				71DCA89E1F5AE43700894BA3 /* Huffman */,
@@ -318,6 +336,23 @@
 			path = Huffman;
 			sourceTree = "<group>";
 		};
+		C92B6711D446649D28B7D1B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67C3FBEF395073E92539F75B /* Pods_HuffmanCode_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE73A3317CECB82070AD608F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27CCD88E94EBBB1D29CD1E5E /* Pods-HuffmanCode-iOS.debug.xcconfig */,
+				EC30CEC045AAE5F9945E308E /* Pods-HuffmanCode-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -325,10 +360,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 719B665B1F5AA0B3007BA408 /* Build configuration list for PBXNativeTarget "HuffmanCode-iOS" */;
 			buildPhases = (
+				89CB5AA66D15BAD4BF3CCEED /* [CP] Check Pods Manifest.lock */,
 				719B66451F5AA0B3007BA408 /* Sources */,
 				719B66461F5AA0B3007BA408 /* Frameworks */,
 				719B66471F5AA0B3007BA408 /* Resources */,
 				717603981F63879400272C96 /* Embed Frameworks */,
+				4F0F89D230DF1586012AF03F /* [CP] Embed Pods Frameworks */,
+				B4CE9442E8379E70A34D663B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -396,6 +434,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4F0F89D230DF1586012AF03F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HuffmanCode-iOS/Pods-HuffmanCode-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89CB5AA66D15BAD4BF3CCEED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B4CE9442E8379E70A34D663B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HuffmanCode-iOS/Pods-HuffmanCode-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		719B66451F5AA0B3007BA408 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -415,6 +501,7 @@
 				71B77FCD1F5C2E2700E4C80B /* ResultCollectionView.swift in Sources */,
 				7146943E1F5AEB46007E2555 /* EncoderViewController.swift in Sources */,
 				719B66691F5AA210007BA408 /* ImageViewController.swift in Sources */,
+				713F023D1F640907002F78C1 /* API.swift in Sources */,
 				7175EF601F5AAAB5007A73AF /* Button.swift in Sources */,
 				7175EF5A1F5AA93F007A73AF /* DestinationImageView.swift in Sources */,
 				714694411F5AF413007E2555 /* DestinationEncoderView.swift in Sources */,
@@ -563,6 +650,7 @@
 		};
 		719B665C1F5AA0B3007BA408 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27CCD88E94EBBB1D29CD1E5E /* Pods-HuffmanCode-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X25KZ54NYC;
@@ -576,6 +664,7 @@
 		};
 		719B665D1F5AA0B3007BA408 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC30CEC045AAE5F9945E308E /* Pods-HuffmanCode-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X25KZ54NYC;

@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.5.0)
+  - Himotoki (3.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Himotoki
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Himotoki: 85fda41d4d0e14f7228317a3b474175cdfb8f515
+
+PODFILE CHECKSUM: 9b9f9d3ffc04e7687b45b521adbb8107513cc7e9
+
+COCOAPODS: 1.1.1
