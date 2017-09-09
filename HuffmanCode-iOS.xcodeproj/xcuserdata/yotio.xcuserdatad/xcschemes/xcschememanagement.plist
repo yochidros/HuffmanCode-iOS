@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>HuffmanPlayground.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>7176038B1F63879400272C96</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>719B66481F5AA0B3007BA408</key>
 		<dict>
 			<key>primary</key>

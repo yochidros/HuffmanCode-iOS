@@ -18,7 +18,9 @@ class ResultContentsCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setup(){
-        
+    func setup(datas:(char: String, freq: Int, code: String)){
+        characterLabel.text = datas.char
+        frequecyLabel.text = String(datas.freq)
+        huffmanCodeLabel.text = datas.code
     }
 }

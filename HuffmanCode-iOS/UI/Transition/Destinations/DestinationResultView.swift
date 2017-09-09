@@ -12,15 +12,8 @@ import UIKit
 class DestinationResultView: PushTransition {
     var src: UIViewController?
     
-    
-    var data: [String:Int]?
-    
-    init(data: [String:Int]) {
-        self.data = data
-    }
     var dst: UIViewController? {
         let vc = ResultViewController.instantiate()
-        vc.data = self.data ?? [ : ]
         return vc
     }
 }

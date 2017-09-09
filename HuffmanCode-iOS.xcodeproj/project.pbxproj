@@ -49,6 +49,19 @@
 		71DCA8A01F5AE44800894BA3 /* Huffman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89F1F5AE44800894BA3 /* Huffman.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		717603981F63879400272C96 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		714694381F5AEB29007E2555 /* DecoderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderViewController.swift; sourceTree = "<group>"; };
 		714694391F5AEB29007E2555 /* DecoderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DecoderViewController.xib; sourceTree = "<group>"; };
@@ -315,6 +328,7 @@
 				719B66451F5AA0B3007BA408 /* Sources */,
 				719B66461F5AA0B3007BA408 /* Frameworks */,
 				719B66471F5AA0B3007BA408 /* Resources */,
+				717603981F63879400272C96 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

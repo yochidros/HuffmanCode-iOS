@@ -8,9 +8,16 @@
 
 import Foundation
 
-public var HuffmanEncode: [String:String] = [:]
-public var decodeText: String = ""
+struct HuffmanModel {
+    var huffmanEncode: [String:String] = [:]
+    var huffmanFreq: [String: Int] = [:]
+    var decodeText: String = ""
+}
+
 class HuffmanCode {
+    static var shared = HuffmanCode()
+    var huffmanData = HuffmanModel()
+    
     enum HuffmanTree<T> {
         case Leaf(T)
         indirect case Node(HuffmanTree<T>, HuffmanTree<T>)
@@ -19,58 +26,41 @@ class HuffmanCode {
             switch(self) {
             case let .Leaf(c):
                 let s = c as! String
-                HuffmanEncode[s] = prefix
+                HuffmanCode.shared.huffmanData.huffmanEncode[s] = prefix
             case let .Node(l, r):
                 l.printCodes(prefix: prefix + "0")
                 r.printCodes(prefix: prefix + "1")
             }
         }
-        
         func decode(string: String){
-            string.forEach { (c) in
-                var n = self
-                var f = true
-                while(f){
-                    if c == "1" {
-                        switch n {
-                        case let .Node(r, _):
-                            let rnode = r
-                            switch rnode {
-                            case let .Leaf(rc):
-                                decodeText = decodeText + String(describing: rc)
-                                n = rnode
-                                f = false
-                                break
-                            default:
-                                break
-                            }
-                        default:
-                            break
-                        }
-                    }else {
-                        switch n {
-                        case let .Node(_, l):
-                            n = l
-                            switch n{
-                            case let .Leaf(lc):
-                                decodeText = decodeText + String(describing: lc)
-                                f = false
-                                break
-                            default:
-                                break
-                            }
-                        default:
-                            break
-                        }
-                        
-                    }
+            var rev_enc :[String: String] = [:]
+            HuffmanCode.shared.huffmanData.huffmanEncode.forEach { (k,v) in
+                rev_enc[v] = k
+            }
+            var decoded = ""
+            var pos = 0
+            var s:[String] = []
+            string.characters.forEach { (c) in
+                s.append(String(c))
+            }
+            while(pos < string.characters.count) {
+                var key = ""
+                while(!(rev_enc.keys.contains(key))){
+                    key += s[pos]
+                    pos += 1
+                }
+                if rev_enc.keys.contains(key) {
+                    decoded += rev_enc[key] ?? ""
                 }
             }
-            
+            HuffmanCode.shared.huffmanData.decodeText = decoded
         }
+        
     }
     
     func buildTree<T>(freqs: [T : Int]) -> HuffmanTree<T> {
+        HuffmanCode.shared.huffmanData.huffmanFreq = freqs as! [String: Int]
+        HuffmanCode.shared.huffmanData.huffmanEncode.removeAll()
         assert(freqs.count > 0, "must contain at least one character")
         // leaves sorted by increasing frequency
         let leaves : [(Int, HuffmanTree<T>)] = freqs.sorted { (p1, p2) in p1.1 < p2.1 }.map { (x, w) in (w, .Leaf(x)) }
@@ -92,7 +82,6 @@ class HuffmanCode {
             
             // if there's no subtrees left, then that one was the answer
             if i == leaves.count && j == nodes.count {
-                HuffmanEncode.removeAll()
                 return e1.1
             }
             
@@ -110,18 +99,12 @@ class HuffmanCode {
         }
     }
     
-    func getFreqs<S : Sequence>(seq: S) -> [(S.Iterator.Element, Int)] where S.Iterator.Element : Hashable {
-        var freqs : [S.Iterator.Element : Int] = [:]
-        for c in seq {
-            freqs[c] = (freqs[c] ?? 0) + 1
-        }
-        return Array(freqs)
-    }
-    
-    //let str = "this is an example for huffman encoding"
-    //let charFreqs = getFreqs(str.characters)
-    //let tree = buildTree(charFreqs)
-    //print("Symbol\tHuffman code")
-    //tree.printCodes("")
+    //    func getFreqs<S : Sequence>(seq: S) -> [(S.Iterator.Element, Int)] where S.Iterator.Element : Hashable {
+    //        var freqs : [S.Iterator.Element : Int] = [:]
+    //        for c in seq {
+    //            freqs[c] = (freqs[c] ?? 0) + 1
+    //        }
+    //        return Array(freqs)
+    //    }
     
 }

@@ -9,20 +9,19 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-    var data : [String: Int]? {
-        didSet {
-            huffmanCode.buildTree(freqs: data ?? [:]).printCodes()
-        }
-    }
+    
     @IBOutlet weak var collectionView: ResultCollectionView!
-    var huffmanCode: HuffmanCode = HuffmanCode()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Result"
-        collectionView.data = data ?? [:]
-        collectionView.huffman = self.huffmanCode
         collectionView.contentsDelegate = self
+        let d = HuffmanCode.shared.huffmanData.huffmanFreq.sorted(by: { $0.0 > $0.0})
+        var ds: [String: Int] = [:]
+        d.forEach { (k,v) in
+            ds[k] = v
+        }
+        collectionView.data = ds
     }
 
 }
@@ -33,7 +32,7 @@ extension ResultViewController: ContentsViewDelegate  {
         case .image:
             self.transition(to: DestinationImageView())
         case .decode:
-            self.transition(to: DestinationDecoderView(huffmanData: self.huffmanCode, data: self.data ?? [:]))
+            self.transition(to: DestinationDecoderView())
         case .encode:
             self.transition(to: DestinationEncoderView())
         case .close:

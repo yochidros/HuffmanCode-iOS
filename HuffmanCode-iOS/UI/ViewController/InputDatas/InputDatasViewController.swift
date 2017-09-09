@@ -23,8 +23,8 @@ class InputDatasViewController: UIViewController {
 
 extension InputDatasViewController: InputDatasView {
     func inputDatasView(_ view: UICollectionViewCell, datas: [String : Int]) {
-        print(datas)
-        self.transition(to: DestinationResultView(data: datas))
+        HuffmanCode.shared.buildTree(freqs: datas).printCodes()
+        self.transition(to: DestinationResultView())
     }
 }
 

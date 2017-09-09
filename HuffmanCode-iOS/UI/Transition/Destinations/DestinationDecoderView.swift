@@ -11,16 +11,8 @@ import UIKit
 
 class DestinationDecoderView: PushTransition {
     var src: UIViewController?
-    var huffmanData : HuffmanCode?
-    var data: [String: Int]?
-    init(huffmanData: HuffmanCode, data: [String:Int]){
-        self.huffmanData = huffmanData
-        self.data = data
-    }
     var dst: UIViewController? {
         let vc = DecoderViewController.instantiate()
-        vc.huffmanData = self.huffmanData ?? HuffmanCode()
-        vc.data = self.data
         return vc
     }
 }

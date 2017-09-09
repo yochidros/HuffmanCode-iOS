@@ -20,8 +20,20 @@ class DecoderViewController: UIViewController {
     
     @IBAction func didSelectDecode(_ sender: Any) {
         guard let text = textField.text else { return }
-        decodeText = ""
-        huffmanData?.buildTree(freqs: data ?? [:]).decode(string: text)
-        self.resultLabel.text = decodeText
+        if checkBinaryCode(text: text) {
+            HuffmanCode.shared.buildTree(freqs: HuffmanCode.shared.huffmanData.huffmanFreq).decode(string: text)
+            resultLabel.text = HuffmanCode.shared.huffmanData.decodeText
+        }else {
+            resultLabel.text = "ERROR: It's contain character code!!\n Please input binary code!!"
+        }
+    }
+    
+    private func checkBinaryCode(text: String) -> Bool{
+        var flag = true
+        text.characters.forEach { (c) in
+            if c == "1" || c == "0" {
+            }else { flag = false }
+        }
+        return flag
     }
 }

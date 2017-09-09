@@ -11,27 +11,27 @@ import UIKit
 class EncoderViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
-////    var hummanTree: HuffmanCode?
-//    var data: [String: Int] = [ : ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Encode"
     }
 
     @IBAction func didSelectEncode(_ sender: Any) {
-//        hummanTree = HuffmanCode()
-//        hummanTree?.buildTree(freqs: data).printCodes()
-        
         var keys: [String] = []
         var text: String = ""
-        HuffmanEncode.keys.forEach { (key) in
+        let encodeDatas = HuffmanCode.shared.huffmanData.huffmanEncode
+        encodeDatas.keys.forEach { (key) in
             keys.append(key)
         }
+        var completeFlag = true
         textField.text?.characters.forEach({ (c) in
             if keys.contains(String(c)) {
-                text = text + HuffmanEncode[String(c)]!
+                text = text + HuffmanCode.shared.huffmanData.huffmanEncode[String(c)]! 
+            }else {
+                completeFlag = false
             }
         })
-        resultLabel.text = "\(HuffmanEncode)\n\(text)"
+        resultLabel.text = completeFlag ? "\(encodeDatas)\n\(text)" : "ERROR: Can't encode from input string"
     }
 }
