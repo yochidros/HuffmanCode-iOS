@@ -16,12 +16,12 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         title = "Result"
         collectionView.contentsDelegate = self
-        let d = HuffmanCode.shared.huffmanData.huffmanFreq.sorted(by: { $0.0 > $0.0})
-        var ds: [String: Int] = [:]
-        d.forEach { (k,v) in
-            ds[k] = v
+        let f = HuffmanCode.shared.huffmanData.huffmanFreq.sorted(by: { $0.1 < $0.1})
+        var freq: [String: Int] = [:]
+        f.forEach { (k,v) in
+            freq[k] = v
         }
-        collectionView.data = ds
+        collectionView.data = freq
     }
 
 }

@@ -18,13 +18,13 @@ class ResultCollectionView: UICollectionView {
     var data: [String: Int] = [:] {
         didSet {
             
-            data.forEach { (k,_) in
-                keys.append(k)
+            data.sorted{ $0.1 < $1.1 }.forEach { (k,_) in
+                encode.append(k)
             }
             reloadData()
         }
     }
-    var keys: [String] = []
+    var encode: [String] = []
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -65,14 +65,15 @@ extension ResultCollectionView: UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 1 { return 1 }
-        return keys.count == 0 ? 0 : keys.count
+        return encode.count == 0 ? 0 : encode.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(with: ResultContentsCollectionViewCell.self, for: indexPath)
-            let key = keys[indexPath.row]
-            cell.setup(datas: (key, data[key] ?? 0, HuffmanCode.shared.huffmanData.huffmanEncode[key] ?? ""))
+            let key = encode[indexPath.row]
+//            cell.setup(datas: (key, data[key] ?? 0, HuffmanCode.shared.huffmanData.huffmanEncode[key] ?? ""))
+            cell.setup(datas: (key, data[key] ?? 0, Huffman3.share.result[key] ?? ""))
             return cell
         }
         else {

@@ -25,6 +25,8 @@ class InputDatasViewController: UIViewController {
 extension InputDatasViewController: InputDatasView {
     func inputDatasView(_ view: UICollectionViewCell, datas: [String : Int]) {
         HuffmanCode().buildTree(freqs: datas).printCodes()
+        let h = Huffman3()
+        print(h.huffman_code(freq: datas))
         let param = [ "data" : datas ]
         let url = "http://localhost:8000/huffman"
         print(param)

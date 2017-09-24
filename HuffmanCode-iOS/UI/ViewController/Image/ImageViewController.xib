@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageViewController" customModule="HuffmanCode_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="doubleTapRecognizer" destination="Q9H-dE-I3b" id="LjQ-TS-vB1"/>
                 <outlet property="imageView" destination="5NP-3B-z4G" id="dn0-Ht-228"/>
+                <outlet property="scrollView" destination="ALD-1w-rA5" id="1Ps-EV-e0Q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,17 +22,38 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5NP-3B-z4G">
-                    <rect key="frame" x="115" y="378" width="240" height="128"/>
-                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ALD-1w-rA5">
+                    <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled_Diagram" translatesAutoresizingMaskIntoConstraints="NO" id="5NP-3B-z4G">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <gestureRecognizers/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="Q9H-dE-I3b" appends="YES" id="LWt-ZV-scB"/>
+                            </connections>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="5NP-3B-z4G" firstAttribute="centerY" secondItem="ALD-1w-rA5" secondAttribute="centerY" id="1EA-Af-Jj1"/>
+                        <constraint firstItem="5NP-3B-z4G" firstAttribute="leading" secondItem="ALD-1w-rA5" secondAttribute="leading" id="2Tr-nI-yUP"/>
+                        <constraint firstAttribute="trailing" secondItem="5NP-3B-z4G" secondAttribute="trailing" id="4Bb-IP-p6E"/>
+                        <constraint firstItem="5NP-3B-z4G" firstAttribute="top" secondItem="ALD-1w-rA5" secondAttribute="top" id="BjT-vP-PFB"/>
+                        <constraint firstAttribute="bottom" secondItem="5NP-3B-z4G" secondAttribute="bottom" id="Dj9-YF-a0H"/>
+                        <constraint firstItem="5NP-3B-z4G" firstAttribute="centerX" secondItem="ALD-1w-rA5" secondAttribute="centerX" id="hlP-fS-v20"/>
+                    </constraints>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="5NP-3B-z4G" secondAttribute="trailing" id="S4m-AY-N40"/>
-                <constraint firstItem="5NP-3B-z4G" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="arw-tw-sfW"/>
-                <constraint firstItem="5NP-3B-z4G" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lGD-iC-Z32"/>
-                <constraint firstAttribute="bottom" secondItem="5NP-3B-z4G" secondAttribute="bottom" id="xGx-hr-zXL"/>
+                <constraint firstItem="ALD-1w-rA5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1zG-NE-CSp"/>
+                <constraint firstAttribute="trailing" secondItem="ALD-1w-rA5" secondAttribute="trailing" id="5j8-l5-cLM"/>
+                <constraint firstItem="ALD-1w-rA5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jy9-kk-ad5"/>
+                <constraint firstAttribute="bottom" secondItem="ALD-1w-rA5" secondAttribute="bottom" id="qrz-8K-0ZB"/>
             </constraints>
         </view>
+        <tapGestureRecognizer id="Q9H-dE-I3b"/>
     </objects>
+    <resources>
+        <image name="Untitled_Diagram" width="689" height="576"/>
+    </resources>
 </document>

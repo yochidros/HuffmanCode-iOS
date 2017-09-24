@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -76,7 +76,6 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="QXh-Ff-yqw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="02J-oL-Uzf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dX8-F4-ljy" secondAttribute="trailing" id="43B-eA-Qc9"/>
                 <constraint firstItem="dX8-F4-ljy" firstAttribute="top" secondItem="QXh-Ff-yqw" secondAttribute="bottom" id="6ep-mZ-r3o"/>
                 <constraint firstItem="dX8-F4-ljy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GKI-db-fiC"/>
@@ -84,6 +83,7 @@
                 <constraint firstItem="dX8-F4-ljy" firstAttribute="top" secondItem="QXh-Ff-yqw" secondAttribute="bottom" id="Loq-1f-8ZP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dX8-F4-ljy" secondAttribute="bottom" id="MLf-LW-CbL"/>
                 <constraint firstItem="QXh-Ff-yqw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZMd-kw-6ws"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="QXh-Ff-yqw" secondAttribute="bottom" constant="-60" id="mLR-iH-aev"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

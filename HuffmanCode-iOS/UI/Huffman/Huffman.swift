@@ -17,6 +17,7 @@ struct HuffmanModel {
 class HuffmanCode {
     static var shared = HuffmanCode()
     var huffmanData = HuffmanModel()
+    var a: [String: Any] = [:]
     enum HuffmanTree<T> {
         case Leaf(T)
         indirect case Node(HuffmanTree<T>, HuffmanTree<T>)
@@ -25,14 +26,10 @@ class HuffmanCode {
             switch(self) {
             case let .Leaf(c):
                 let s = c as! String
-                if prefix == "" {
-                    HuffmanCode.shared.huffmanData.huffmanEncode[s] = "0"
-                    return
-                }
                 HuffmanCode.shared.huffmanData.huffmanEncode[s] = prefix
             case let .Node(l, r):
-                l.printCodes(prefix: prefix + "0")
-                r.printCodes(prefix: prefix + "1")
+                l.printCodes(prefix:  prefix + "0")
+                r.printCodes(prefix:  prefix + "1")
             }
         }
         
@@ -71,7 +68,8 @@ class HuffmanCode {
         HuffmanCode.shared.huffmanData.huffmanEncode.removeAll()
         assert(freqs.count > 0, "must contain at least one character")
         // leaves sorted by increasing frequency
-        let leaves : [(Int, HuffmanTree<T>)] = freqs.sorted { (p1, p2) in p1.1 < p2.1 }.map { (x, w) in (w, .Leaf(x)) }
+        let leaves : [(Int, HuffmanTree<T>)] = freqs.sorted { (p1, p2) in p1.1 < p2.1 }.map { (x, w) in
+            print(w) ; return (w, .Leaf(x)) }
         // nodes sorted by increasing frequency
         var nodes = [(Int, HuffmanTree<T>)]()
         var tree: HuffmanTree<T>? = nil
@@ -105,6 +103,7 @@ class HuffmanCode {
                 j = j + 1
             }
             // create node from two subtrees
+            
             nodes.append((e1.0 + e2.0, .Node(e1.1, e2.1)))
         }
         return tree!
