@@ -34,7 +34,7 @@ extension InputDatasViewController: InputDatasView {
                 print(json)
             }
         }
-        
+        Huffman3.share.huffman_code(freq: datas)
         self.transition(to: DestinationResultView())
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ImageViewController: UIViewController {
 
@@ -24,6 +25,10 @@ class ImageViewController: UIViewController {
         doubleTapRecognizer.numberOfTapsRequired = 2
         doubleTapRecognizer.addTarget(self, action: #selector(doubleTap(gesture:)))
         imageView.isUserInteractionEnabled = true
+//        imageView.sd_setImage(with: URL(string: "https://s3-ap-northeast-1.amazonaws.com/projecthuffmancode/images/graph.png"), completed: nil)
+        SDWebImageDownloader.shared().downloadImage(with: URL(string: "https://s3-ap-northeast-1.amazonaws.com/projecthuffmancode/images/graph.png"), options: SDWebImageDownloaderOptions(rawValue: 0), progress: nil) { (image, data, errr, isfinish) in
+            self.imageView.image = image
+        }
     }
     
     func doubleTap(gesture: UITapGestureRecognizer) -> Void {

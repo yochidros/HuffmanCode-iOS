@@ -7,6 +7,7 @@ target 'HuffmanCode-iOS' do
 
   pod 'Himotoki'
   pod 'Alamofire'
+  pod 'SDWebImage', '~>4.0'
   # Pods for HuffmanCode-iOS
 
 end

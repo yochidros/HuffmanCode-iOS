@@ -1,15 +1,20 @@
 PODS:
   - Alamofire (4.5.0)
   - Himotoki (3.0.1)
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - Himotoki
+  - SDWebImage (~> 4.0)
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   Himotoki: 85fda41d4d0e14f7228317a3b474175cdfb8f515
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
 
-PODFILE CHECKSUM: 9b9f9d3ffc04e7687b45b521adbb8107513cc7e9
+PODFILE CHECKSUM: 4c695e350c76d142926399dd8f51ebc320566d97
 
 COCOAPODS: 1.3.1

@@ -44,7 +44,8 @@ class Huffman3 {
             nodes[a1.key + a2.key] = [a1.key, a2.key]
             root = a1.key + a2.key
         }
-        if vals.count == 1 {
+        // input data's count == 1
+        if freq.count == 1 {
             freq.forEach({ (k,v) in
                 Huffman3.share.result[k] = "0"
             })
