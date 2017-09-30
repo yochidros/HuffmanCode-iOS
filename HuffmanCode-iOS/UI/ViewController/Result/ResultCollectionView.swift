@@ -17,7 +17,6 @@ class ResultCollectionView: UICollectionView {
     // TODO: sorted data
     var data: [String: Int] = [:] {
         didSet {
-            
             data.sorted{ $0.1 < $1.1 }.forEach { (k,_) in
                 encode.append(k)
             }
@@ -72,7 +71,6 @@ extension ResultCollectionView: UICollectionViewDataSource {
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(with: ResultContentsCollectionViewCell.self, for: indexPath)
             let key = encode[indexPath.row]
-//            cell.setup(datas: (key, data[key] ?? 0, HuffmanCode.shared.huffmanData.huffmanEncode[key] ?? ""))
             cell.setup(datas: (key, data[key] ?? 0, Huffman3.share.result[key] ?? ""))
             return cell
         }

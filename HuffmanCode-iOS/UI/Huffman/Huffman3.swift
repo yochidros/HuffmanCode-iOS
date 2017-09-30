@@ -11,10 +11,13 @@ import Foundation
 
 class Huffman3 {
     static var share = Huffman3()
+    var freq: [String: Int] = [:]
+    var result: [String: String] = [:]
+    var tree = Dictionary<String, Any>()
     
     func huffman_code(freq: [String: Int]){
-        var vals = freq
-        
+        Huffman3.share.freq = freq
+        var vals: [String: Int] = freq
         var nodes = Dictionary<String, Any>()
         
         for n in vals.keys{
@@ -50,21 +53,16 @@ class Huffman3 {
         _ = assign_code(nodes: nodes, label: root, result: [:])
        
     }
-    var result: [String: String] = [:]
-    var tree = Dictionary<String, Any>()
-    func assign_code(nodes: Dictionary<String, Any> , label: String, result: [String: String], prefix: String = "") -> String{
+  
+    private func assign_code(nodes: Dictionary<String, Any> , label: String, result: [String: String], prefix: String = "") -> String{
         let childs : [String] = nodes[label] as! [String]
-        print(childs)
         var tree = Dictionary<String,Any>()
         if childs.count == 2{
             tree["0"] = assign_code(nodes: nodes, label: childs[0], result: result, prefix: prefix + "0")
             tree["1"] = assign_code(nodes: nodes, label: childs[1], result: result, prefix: prefix + "1")
-            print(tree)
             Huffman3.share.tree = tree
             return ""
         }else {
-            print("\(label) : \(prefix)")
-            self.result[label] = prefix
             Huffman3.share.result[label] = prefix
             return label
         }
@@ -75,7 +73,6 @@ class Huffman3 {
         text.forEach { (c) in
             res += Huffman3.share.result["\(c)"]!
         }
-        print(res)
         return res
     }
     
@@ -101,7 +98,6 @@ class Huffman3 {
                 decoded += rev_enc[key] ?? ""
             }
         }
-        print(decoded)
         return decoded
     }
     
