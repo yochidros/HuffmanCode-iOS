@@ -20,15 +20,15 @@ class EncoderViewController: UIViewController {
     @IBAction func didSelectEncode(_ sender: Any) {
         var keys: [String] = []
         var text: String = ""
-        let encodeDatas = Huffman3.share.result
-        let d = Huffman3.share.result
+        let encodeDatas = HuffmanModel.share.result
+        let d = HuffmanModel.share.result
         d.keys.forEach { (key) in
             keys.append(key)
         }
         var completeFlag = true
         textField.text?.characters.forEach({ (c) in
             if keys.contains(String(c)) {
-                text += Huffman3.share.result[String(c)]!
+                text += HuffmanModel.share.result[String(c)]!
 //                text = text + HuffmanCode.shared.huffmanData.huffmanEncode[String(c)]!
             }else {
                 completeFlag = false

@@ -8,15 +8,18 @@
 
 import Foundation
 
-
-class Huffman3 {
-    static var share = Huffman3()
-    var freq: [String: Int] = [:]
+class HuffmanModel {
+    static let share = HuffmanModel()
+    var frequency: [String: Int] = [:]
     var result: [String: String] = [:]
     var tree = Dictionary<String, Any>()
+}
+
+class HuffmanViewModel {
     
     func huffman_code(freq: [String: Int]){
-        Huffman3.share.freq = freq
+        HuffmanModel.share.frequency = freq
+        
         var vals: [String: Int] = freq
         var nodes = Dictionary<String, Any>()
         
@@ -49,12 +52,13 @@ class Huffman3 {
         // input data's count == 1
         if freq.count == 1 {
             freq.forEach({ (k,v) in
-                Huffman3.share.result[k] = "0"
+                HuffmanModel.share.result[k] = "0"
             })
             return
         }
         _ = assign_code(nodes: nodes, label: root, result: [:])
-       
+        
+        HuffmanSession().session(request: HuffmanAPI.PostHuffmanData())
     }
   
     private func assign_code(nodes: Dictionary<String, Any> , label: String, result: [String: String], prefix: String = "") -> String{
@@ -63,10 +67,10 @@ class Huffman3 {
         if childs.count == 2{
             tree["0"] = assign_code(nodes: nodes, label: childs[0], result: result, prefix: prefix + "0")
             tree["1"] = assign_code(nodes: nodes, label: childs[1], result: result, prefix: prefix + "1")
-            Huffman3.share.tree = tree
+            HuffmanModel.share.tree = tree
             return ""
         }else {
-            Huffman3.share.result[label] = prefix
+            HuffmanModel.share.result[label] = prefix
             return label
         }
     }
@@ -74,14 +78,14 @@ class Huffman3 {
     func encode(text: String) -> String{
         var res = ""
         text.forEach { (c) in
-            res += Huffman3.share.result["\(c)"]!
+            res += HuffmanModel.share.result["\(c)"]!
         }
         return res
     }
     
     func decode(string: String) -> String{
         var rev_enc :[String: String] = [:]
-        Huffman3.share.result.forEach { (k,v) in
+        HuffmanModel.share.result.forEach { (k,v) in
             rev_enc[v] = k
         }
         var decoded = ""

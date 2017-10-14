@@ -22,18 +22,9 @@ class InputDatasViewController: UIViewController {
 }
 
 extension InputDatasViewController: InputDatasView {
-    func inputDatasView(_ view: UICollectionViewCell, datas: [String : Int]) {       
-        let param = [ "data" : datas ]
-        let url = "http://localhost:8000/huffman"
-        print(param)
-//        Alamofire.request(url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: nil).responseJSON { (res) in
-//            print(res.response)
-//            print(res.result)
-//            if let json = res.value {
-//                print(json)
-//            }
-//        }
-        Huffman3.share.huffman_code(freq: datas)
+    func inputDatasView(_ view: UICollectionViewCell, datas: [String : Int]) {
+        HuffmanViewModel().huffman_code(freq: datas)
+//        HuffmanModel.share.huffman_code(freq: datas)
         self.transition(to: DestinationResultView())
     }
 }

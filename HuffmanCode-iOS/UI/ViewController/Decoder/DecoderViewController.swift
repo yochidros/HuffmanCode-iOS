@@ -20,7 +20,7 @@ class DecoderViewController: UIViewController {
     @IBAction func didSelectDecode(_ sender: Any) {
         guard let text = textField.text else { return }
         if checkBinaryCode(text: text) {
-            resultLabel.text =  Huffman3.share.decode(string: text)
+            resultLabel.text =  HuffmanViewModel().decode(string: text)
         }else {
             resultLabel.text = "ERROR: It's contain character code!!\n Please input binary code!!"
         }
