@@ -1,2 +1,2 @@
 # podを無視。
-/Pods/
+Pods/*
