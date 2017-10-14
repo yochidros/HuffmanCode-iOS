@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class InputDatasViewController: UIViewController {
     @IBOutlet weak var collectionView: InputDatasCollectionView!
@@ -27,13 +26,13 @@ extension InputDatasViewController: InputDatasView {
         let param = [ "data" : datas ]
         let url = "http://localhost:8000/huffman"
         print(param)
-        Alamofire.request(url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: nil).responseJSON { (res) in
-            print(res.response)
-            print(res.result)
-            if let json = res.value {
-                print(json)
-            }
-        }
+//        Alamofire.request(url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: nil).responseJSON { (res) in
+//            print(res.response)
+//            print(res.result)
+//            if let json = res.value {
+//                print(json)
+//            }
+//        }
         Huffman3.share.huffman_code(freq: datas)
         self.transition(to: DestinationResultView())
     }

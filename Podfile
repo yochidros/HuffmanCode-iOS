@@ -5,8 +5,7 @@ target 'HuffmanCode-iOS' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'Himotoki'
-  pod 'Alamofire'
+  pod 'APIKit'
   pod 'SDWebImage', '~>4.0'
   # Pods for HuffmanCode-iOS
 

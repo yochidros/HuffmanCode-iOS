@@ -31,7 +31,7 @@ class ImageViewController: UIViewController {
         }
     }
     
-    func doubleTap(gesture: UITapGestureRecognizer) -> Void {
+    @objc func doubleTap(gesture: UITapGestureRecognizer) -> Void {
         if ( self.scrollView.zoomScale < 3 ) {
             let newScale:CGFloat = self.scrollView.zoomScale * 3
             let zoomRect:CGRect = self.zoomRectForScale(scale: newScale, center: gesture.location(in: gesture.view))

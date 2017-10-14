@@ -38,7 +38,9 @@ class Huffman3 {
                 }
                 i += 1
             }
-            vals[a1.key + a2.key] = (vals[a1.key] as! Int) + (vals[a2.key] as! Int)
+            if let k1 = vals[a1.key], let k2 = vals[a2.key] {
+                vals[a1.key + a2.key] = k1 + k2
+            }            
             vals.removeValue(forKey: a1.key)
             vals.removeValue(forKey: a2.key)
             nodes[a1.key + a2.key] = [a1.key, a2.key]
