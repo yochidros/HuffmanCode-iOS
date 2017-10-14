@@ -22,11 +22,8 @@
 		7175EF5D1F5AAAA7007A73AF /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EF5B1F5AAAA7007A73AF /* ResultViewController.swift */; };
 		7175EF5E1F5AAAA7007A73AF /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7175EF5C1F5AAAA7007A73AF /* ResultViewController.xib */; };
 		7175EF601F5AAAB5007A73AF /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EF5F1F5AAAB5007A73AF /* Button.swift */; };
-		7175EF631F5AABDF007A73AF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EF611F5AABDF007A73AF /* FirstViewController.swift */; };
-		7175EF641F5AABDF007A73AF /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7175EF621F5AABDF007A73AF /* FirstViewController.xib */; };
 		719B664D1F5AA0B3007BA408 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719B664C1F5AA0B3007BA408 /* AppDelegate.swift */; };
-		719B664F1F5AA0B3007BA408 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719B664E1F5AA0B3007BA408 /* ViewController.swift */; };
-		719B66521F5AA0B3007BA408 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 719B66501F5AA0B3007BA408 /* Main.storyboard */; };
+		719B664F1F5AA0B3007BA408 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719B664E1F5AA0B3007BA408 /* TopViewController.swift */; };
 		719B66541F5AA0B3007BA408 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719B66531F5AA0B3007BA408 /* Assets.xcassets */; };
 		719B66571F5AA0B3007BA408 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 719B66551F5AA0B3007BA408 /* LaunchScreen.storyboard */; };
 		719B66691F5AA210007BA408 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719B66671F5AA210007BA408 /* ImageViewController.swift */; };
@@ -45,9 +42,11 @@
 		71B77FD21F5C2EB400E4C80B /* ResultContentsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B77FD01F5C2EB400E4C80B /* ResultContentsCollectionViewCell.xib */; };
 		71B77FD51F5C330300E4C80B /* ResultToolsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B77FD31F5C330300E4C80B /* ResultToolsCollectionViewCell.swift */; };
 		71B77FD61F5C330300E4C80B /* ResultToolsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B77FD41F5C330300E4C80B /* ResultToolsCollectionViewCell.xib */; };
+		71D5B74F1F91BE4F00BDAE43 /* TopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D5B74E1F91BE4F00BDAE43 /* TopViewController.xib */; };
+		71D5B7521F91C35800BDAE43 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D5B7501F91C35700BDAE43 /* FirstViewController.xib */; };
+		71D5B7531F91C35800BDAE43 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D5B7511F91C35800BDAE43 /* FirstViewController.swift */; };
 		71DCA89B1F5AD50100894BA3 /* InputDatasAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89A1F5AD50100894BA3 /* InputDatasAction.swift */; };
 		71DCA89D1F5AE17800894BA3 /* DestinationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89C1F5AE17800894BA3 /* DestinationResultView.swift */; };
-		71DCA8A01F5AE44800894BA3 /* Huffman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89F1F5AE44800894BA3 /* Huffman.swift */; };
 		774D374AE8B5DB9026B1F919 /* Pods_HuffmanCode_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C3FBEF395073E92539F75B /* Pods_HuffmanCode_iOS.framework */; };
 		CE832F161F7751560064A2EE /* Huffman3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE832F151F7751560064A2EE /* Huffman3.swift */; };
 /* End PBXBuildFile section */
@@ -83,12 +82,9 @@
 		7175EF5B1F5AAAA7007A73AF /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		7175EF5C1F5AAAA7007A73AF /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
 		7175EF5F1F5AAAB5007A73AF /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		7175EF611F5AABDF007A73AF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		7175EF621F5AABDF007A73AF /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		719B66491F5AA0B3007BA408 /* HuffmanCode-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HuffmanCode-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		719B664C1F5AA0B3007BA408 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		719B664E1F5AA0B3007BA408 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		719B66511F5AA0B3007BA408 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		719B664E1F5AA0B3007BA408 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		719B66531F5AA0B3007BA408 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		719B66561F5AA0B3007BA408 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		719B66581F5AA0B3007BA408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,9 +104,11 @@
 		71B77FD01F5C2EB400E4C80B /* ResultContentsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultContentsCollectionViewCell.xib; sourceTree = "<group>"; };
 		71B77FD31F5C330300E4C80B /* ResultToolsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultToolsCollectionViewCell.swift; sourceTree = "<group>"; };
 		71B77FD41F5C330300E4C80B /* ResultToolsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultToolsCollectionViewCell.xib; sourceTree = "<group>"; };
+		71D5B74E1F91BE4F00BDAE43 /* TopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopViewController.xib; sourceTree = "<group>"; };
+		71D5B7501F91C35700BDAE43 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		71D5B7511F91C35800BDAE43 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		71DCA89A1F5AD50100894BA3 /* InputDatasAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDatasAction.swift; sourceTree = "<group>"; };
 		71DCA89C1F5AE17800894BA3 /* DestinationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationResultView.swift; sourceTree = "<group>"; };
-		71DCA89F1F5AE44800894BA3 /* Huffman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huffman.swift; sourceTree = "<group>"; };
 		CE832F151F7751560064A2EE /* Huffman3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huffman3.swift; sourceTree = "<group>"; };
 		EC30CEC045AAE5F9945E308E /* Pods-HuffmanCode-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuffmanCode-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuffmanCode-iOS/Pods-HuffmanCode-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,10 +176,10 @@
 		719B66401F5AA0B3007BA408 = {
 			isa = PBXGroup;
 			children = (
-				719B664B1F5AA0B3007BA408 /* HuffmanCode-iOS */,
-				719B664A1F5AA0B3007BA408 /* Products */,
-				CE73A3317CECB82070AD608F /* Pods */,
 				C92B6711D446649D28B7D1B3 /* Frameworks */,
+				719B664B1F5AA0B3007BA408 /* HuffmanCode-iOS */,
+				CE73A3317CECB82070AD608F /* Pods */,
+				719B664A1F5AA0B3007BA408 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,11 +194,12 @@
 		719B664B1F5AA0B3007BA408 /* HuffmanCode-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				713F023B1F6408F9002F78C1 /* API */,
+				71D5B74C1F91BA0A00BDAE43 /* Application */,
+				71DCA89E1F5AE43700894BA3 /* Huffman */,
+				71D5B74D1F91BA2100BDAE43 /* Resources */,
+				71D5B74B1F91B9EA00BDAE43 /* Support */,
 				719B665E1F5AA0C3007BA408 /* UI */,
-				719B664C1F5AA0B3007BA408 /* AppDelegate.swift */,
-				719B66531F5AA0B3007BA408 /* Assets.xcassets */,
-				719B66581F5AA0B3007BA408 /* Info.plist */,
-				719B66551F5AA0B3007BA408 /* LaunchScreen.storyboard */,
 			);
 			path = "HuffmanCode-iOS";
 			sourceTree = "<group>";
@@ -208,11 +207,9 @@
 		719B665E1F5AA0C3007BA408 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				713F023B1F6408F9002F78C1 /* API */,
-				719B66621F5AA101007BA408 /* Component */,
 				719B665F1F5AA0D4007BA408 /* Extension */,
-				71DCA89E1F5AE43700894BA3 /* Huffman */,
 				7175EF551F5AA733007A73AF /* Transition */,
+				719B66621F5AA101007BA408 /* View */,
 				719B66601F5AA0D9007BA408 /* ViewController */,
 			);
 			path = UI;
@@ -247,25 +244,25 @@
 		719B66611F5AA0DA007BA408 /* First */ = {
 			isa = PBXGroup;
 			children = (
-				7175EF611F5AABDF007A73AF /* FirstViewController.swift */,
-				7175EF621F5AABDF007A73AF /* FirstViewController.xib */,
+				71D5B7511F91C35800BDAE43 /* FirstViewController.swift */,
+				71D5B7501F91C35700BDAE43 /* FirstViewController.xib */,
 			);
 			path = First;
 			sourceTree = "<group>";
 		};
-		719B66621F5AA101007BA408 /* Component */ = {
+		719B66621F5AA101007BA408 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				7175EF5F1F5AAAB5007A73AF /* Button.swift */,
 			);
-			path = Component;
+			path = View;
 			sourceTree = "<group>";
 		};
 		719B66631F5AA1B0007BA408 /* Top */ = {
 			isa = PBXGroup;
 			children = (
-				719B66501F5AA0B3007BA408 /* Main.storyboard */,
-				719B664E1F5AA0B3007BA408 /* ViewController.swift */,
+				719B664E1F5AA0B3007BA408 /* TopViewController.swift */,
+				71D5B74E1F91BE4F00BDAE43 /* TopViewController.xib */,
 			);
 			path = Top;
 			sourceTree = "<group>";
@@ -330,10 +327,34 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		71D5B74B1F91B9EA00BDAE43 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				719B66581F5AA0B3007BA408 /* Info.plist */,
+				719B66551F5AA0B3007BA408 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		71D5B74C1F91BA0A00BDAE43 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				719B664C1F5AA0B3007BA408 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		71D5B74D1F91BA2100BDAE43 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				719B66531F5AA0B3007BA408 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		71DCA89E1F5AE43700894BA3 /* Huffman */ = {
 			isa = PBXGroup;
 			children = (
-				71DCA89F1F5AE44800894BA3 /* Huffman.swift */,
 				CE832F151F7751560064A2EE /* Huffman3.swift */,
 			);
 			path = Huffman;
@@ -393,6 +414,7 @@
 					719B66481F5AA0B3007BA408 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = X25KZ54NYC;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -423,15 +445,15 @@
 				719B66571F5AA0B3007BA408 /* LaunchScreen.storyboard in Resources */,
 				7146943F1F5AEB46007E2555 /* EncoderViewController.xib in Resources */,
 				7146943B1F5AEB29007E2555 /* DecoderViewController.xib in Resources */,
-				7175EF641F5AABDF007A73AF /* FirstViewController.xib in Resources */,
+				71D5B74F1F91BE4F00BDAE43 /* TopViewController.xib in Resources */,
 				71A7A3F01F5AC04600A22496 /* InputDatasCollectionViewCell.xib in Resources */,
 				719B66541F5AA0B3007BA408 /* Assets.xcassets in Resources */,
 				71A7A3E01F5ABCDD00A22496 /* InputDatasViewController.xib in Resources */,
+				71D5B7521F91C35800BDAE43 /* FirstViewController.xib in Resources */,
 				71B77FD61F5C330300E4C80B /* ResultToolsCollectionViewCell.xib in Resources */,
 				719B666A1F5AA210007BA408 /* ImageViewController.xib in Resources */,
 				7175EF5E1F5AAAA7007A73AF /* ResultViewController.xib in Resources */,
 				71B77FD21F5C2EB400E4C80B /* ResultContentsCollectionViewCell.xib in Resources */,
-				719B66521F5AA0B3007BA408 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +497,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B4CE9442E8379E70A34D663B /* [CP] Copy Pods Resources */ = {
@@ -509,7 +531,8 @@
 				71B77FD51F5C330300E4C80B /* ResultToolsCollectionViewCell.swift in Sources */,
 				71A7A3EF1F5AC04600A22496 /* InputDatasCollectionViewCell.swift in Sources */,
 				7175EF521F5AA397007A73AF /* UIViewExtension.swift in Sources */,
-				719B664F1F5AA0B3007BA408 /* ViewController.swift in Sources */,
+				719B664F1F5AA0B3007BA408 /* TopViewController.swift in Sources */,
+				71D5B7531F91C35800BDAE43 /* FirstViewController.swift in Sources */,
 				71A7A3EB1F5ABFD000A22496 /* UITextFieldExtension.swift in Sources */,
 				7175EF541F5AA40C007A73AF /* UIViewControllerExtension.swift in Sources */,
 				71B77FCD1F5C2E2700E4C80B /* ResultCollectionView.swift in Sources */,
@@ -524,11 +547,9 @@
 				7175EF501F5AA325007A73AF /* NSObjectExtension.swift in Sources */,
 				7175EF5D1F5AAAA7007A73AF /* ResultViewController.swift in Sources */,
 				71DCA89D1F5AE17800894BA3 /* DestinationResultView.swift in Sources */,
-				71DCA8A01F5AE44800894BA3 /* Huffman.swift in Sources */,
 				71A7A3E91F5ABFAF00A22496 /* UICollectionViewExtension.swift in Sources */,
 				71DCA89B1F5AD50100894BA3 /* InputDatasAction.swift in Sources */,
 				71A7A3DC1F5AB1B200A22496 /* DestinationFirstView.swift in Sources */,
-				7175EF631F5AABDF007A73AF /* FirstViewController.swift in Sources */,
 				71A7A3DF1F5ABCDD00A22496 /* InputDatasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,15 +557,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		719B66501F5AA0B3007BA408 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				719B66511F5AA0B3007BA408 /* Base */,
-			);
-			name = Main.storyboard;
-			path = .;
-			sourceTree = "<group>";
-		};
 		719B66551F5AA0B3007BA408 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -668,11 +680,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X25KZ54NYC;
-				INFOPLIST_FILE = "HuffmanCode-iOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/HuffmanCode-iOS/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yochio.HuffmanCode-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -682,11 +695,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X25KZ54NYC;
-				INFOPLIST_FILE = "HuffmanCode-iOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/HuffmanCode-iOS/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yochio.HuffmanCode-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

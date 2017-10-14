@@ -9,8 +9,7 @@
 import UIKit
 
 class DecoderViewController: UIViewController {
-    var huffmanData: HuffmanCode?
-    var data: [String: Int]?
+    
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     override func viewDidLoad() {
@@ -21,7 +20,6 @@ class DecoderViewController: UIViewController {
     @IBAction func didSelectDecode(_ sender: Any) {
         guard let text = textField.text else { return }
         if checkBinaryCode(text: text) {
-//            HuffmanCode.shared.buildTree(freqs: HuffmanCode.shared.huffmanData.huffmanFreq).decode(string: text)
             resultLabel.text =  Huffman3.share.decode(string: text)
         }else {
             resultLabel.text = "ERROR: It's contain character code!!\n Please input binary code!!"
