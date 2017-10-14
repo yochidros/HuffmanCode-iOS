@@ -16,7 +16,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         title = "Result"
         collectionView.contentsDelegate = self
-        let f = Huffman3.share.freq.sorted{ $0.1 < $1.1 }
+        let f = HuffmanModel.share.frequency.sorted{ $0.1 < $1.1 }
         var freq: [String: Int] = [:]
         f.forEach { (k,v) in
             freq[k] = v

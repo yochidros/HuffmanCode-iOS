@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import APIKit
+
+final class HuffmanSession<T: Request>{
+    func session(request: T) {
+        Session.send(request) { result in
+            switch result {
+            case .success(let response):
+                print(response)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+}

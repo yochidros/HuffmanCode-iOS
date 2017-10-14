@@ -71,7 +71,7 @@ extension ResultCollectionView: UICollectionViewDataSource {
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(with: ResultContentsCollectionViewCell.self, for: indexPath)
             let key = encode[indexPath.row]
-            cell.setup(datas: (key, data[key] ?? 0, Huffman3.share.result[key] ?? ""))
+            cell.setup(datas: (key, data[key] ?? 0, HuffmanModel.share.result[key] ?? ""))
             return cell
         }
         else {
