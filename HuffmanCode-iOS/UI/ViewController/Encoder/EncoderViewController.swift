@@ -29,12 +29,10 @@ class EncoderViewController: UIViewController {
         textField.text?.characters.forEach({ (c) in
             if keys.contains(String(c)) {
                 text += HuffmanModel.share.result[String(c)]!
-//                text = text + HuffmanCode.shared.huffmanData.huffmanEncode[String(c)]!
             }else {
                 completeFlag = false
             }
         })
-//        text = Huffman3.share.encode(text: textField.text!)
         resultLabel.text = completeFlag ? "\(encodeDatas)\n\(text)" : "ERROR: Can't encode from input string"
     }
 }
