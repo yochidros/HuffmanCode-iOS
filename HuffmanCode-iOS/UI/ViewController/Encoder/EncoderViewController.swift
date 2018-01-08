@@ -22,9 +22,7 @@ class EncoderViewController: UIViewController {
         var text: String = ""
         let encodeDatas = HuffmanModel.share.result
         let d = HuffmanModel.share.result
-        d.keys.forEach { (key) in
-            keys.append(key)
-        }
+        d.keys.forEach({ keys.append($0) })
         var completeFlag = true
         textField.text?.characters.forEach({ (c) in
             if keys.contains(String(c)) {

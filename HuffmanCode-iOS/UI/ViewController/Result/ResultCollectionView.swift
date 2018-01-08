@@ -44,7 +44,6 @@ class ResultCollectionView: UICollectionView {
         dataSource = self
         delegate = self
         register(cellTypes: [ResultContentsCollectionViewCell.self,ResultToolsCollectionViewCell.self])
-        reloadData()
     }
 }
 

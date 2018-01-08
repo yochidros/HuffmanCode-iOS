@@ -10,8 +10,8 @@ import Foundation
 import APIKit
 
 struct HuffmanResponse: Decodable {
-    let message: String
+    let imageName: String
     private enum CodingKeys: String, CodingKey {
-        case message
+        case imageName = "image_name"
     }
 }

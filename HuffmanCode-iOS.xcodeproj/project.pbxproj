@@ -51,7 +51,7 @@
 		71DCA89B1F5AD50100894BA3 /* InputDatasAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89A1F5AD50100894BA3 /* InputDatasAction.swift */; };
 		71DCA89D1F5AE17800894BA3 /* DestinationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89C1F5AE17800894BA3 /* DestinationResultView.swift */; };
 		774D374AE8B5DB9026B1F919 /* Pods_HuffmanCode_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C3FBEF395073E92539F75B /* Pods_HuffmanCode_iOS.framework */; };
-		CE832F161F7751560064A2EE /* Huffman3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE832F151F7751560064A2EE /* Huffman3.swift */; };
+		CE832F161F7751560064A2EE /* Huffman.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE832F151F7751560064A2EE /* Huffman.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -115,7 +115,7 @@
 		71D5B7511F91C35800BDAE43 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		71DCA89A1F5AD50100894BA3 /* InputDatasAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDatasAction.swift; sourceTree = "<group>"; };
 		71DCA89C1F5AE17800894BA3 /* DestinationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationResultView.swift; sourceTree = "<group>"; };
-		CE832F151F7751560064A2EE /* Huffman3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huffman3.swift; sourceTree = "<group>"; };
+		CE832F151F7751560064A2EE /* Huffman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huffman.swift; sourceTree = "<group>"; };
 		EC30CEC045AAE5F9945E308E /* Pods-HuffmanCode-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuffmanCode-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuffmanCode-iOS/Pods-HuffmanCode-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -380,7 +380,7 @@
 		71DCA89E1F5AE43700894BA3 /* Huffman */ = {
 			isa = PBXGroup;
 			children = (
-				CE832F151F7751560064A2EE /* Huffman3.swift */,
+				CE832F151F7751560064A2EE /* Huffman.swift */,
 			);
 			path = Huffman;
 			sourceTree = "<group>";
@@ -548,7 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				714694451F5B08B6007E2555 /* DestinationDecoderView.swift in Sources */,
-				CE832F161F7751560064A2EE /* Huffman3.swift in Sources */,
+				CE832F161F7751560064A2EE /* Huffman.swift in Sources */,
 				71B77FD11F5C2EB400E4C80B /* ResultContentsCollectionViewCell.swift in Sources */,
 				71A7A3E21F5ABD0C00A22496 /* DestinationInputDatasView.swift in Sources */,
 				71A7A3E51F5ABEB800A22496 /* InputDatasCollectionView.swift in Sources */,

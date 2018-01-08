@@ -10,11 +10,14 @@ import Foundation
 import APIKit
 
 final class HuffmanSession<T: Request>{
-    func session(request: T) {
+    static func session(request: T) {
         Session.send(request) { result in
             switch result {
             case .success(let response):
-                print(response)
+                guard let response = response as? HuffmanResponse else {
+                    return
+                }
+                HuffmanModel.share.responseData = response
             case .failure(let error):
                 print(error)
             }
