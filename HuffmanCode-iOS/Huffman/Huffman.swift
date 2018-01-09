@@ -20,7 +20,7 @@ class HuffmanViewModel {
     
     func huffman_code(freq: [String: Int]){
         HuffmanModel.share.frequency = freq
-        
+        HuffmanModel.share.result.removeAll()
         var vals: [String: Int] = freq
         var nodes = Dictionary<String, Any>()
         

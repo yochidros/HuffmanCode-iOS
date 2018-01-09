@@ -51,6 +51,9 @@
 		71DCA89B1F5AD50100894BA3 /* InputDatasAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89A1F5AD50100894BA3 /* InputDatasAction.swift */; };
 		71DCA89D1F5AE17800894BA3 /* DestinationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89C1F5AE17800894BA3 /* DestinationResultView.swift */; };
 		774D374AE8B5DB9026B1F919 /* Pods_HuffmanCode_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C3FBEF395073E92539F75B /* Pods_HuffmanCode_iOS.framework */; };
+		CE6088802004C7970057094C /* CoderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE60887E2004C7970057094C /* CoderTableViewCell.swift */; };
+		CE6088812004C7970057094C /* CoderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE60887F2004C7970057094C /* CoderTableViewCell.xib */; };
+		CE6088832004C95D0057094C /* EncoderViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6088822004C95D0057094C /* EncoderViewController+UITableView.swift */; };
 		CE832F161F7751560064A2EE /* Huffman.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE832F151F7751560064A2EE /* Huffman.swift */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +118,9 @@
 		71D5B7511F91C35800BDAE43 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		71DCA89A1F5AD50100894BA3 /* InputDatasAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDatasAction.swift; sourceTree = "<group>"; };
 		71DCA89C1F5AE17800894BA3 /* DestinationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationResultView.swift; sourceTree = "<group>"; };
+		CE60887E2004C7970057094C /* CoderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoderTableViewCell.swift; sourceTree = "<group>"; };
+		CE60887F2004C7970057094C /* CoderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoderTableViewCell.xib; sourceTree = "<group>"; };
+		CE6088822004C95D0057094C /* EncoderViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncoderViewController+UITableView.swift"; sourceTree = "<group>"; };
 		CE832F151F7751560064A2EE /* Huffman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huffman.swift; sourceTree = "<group>"; };
 		EC30CEC045AAE5F9945E308E /* Pods-HuffmanCode-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuffmanCode-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuffmanCode-iOS/Pods-HuffmanCode-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,8 +150,10 @@
 		714694361F5AEAF4007E2555 /* Encoder */ = {
 			isa = PBXGroup;
 			children = (
+				CE6088792004C5E20057094C /* TableView */,
 				7146943C1F5AEB46007E2555 /* EncoderViewController.swift */,
 				7146943D1F5AEB46007E2555 /* EncoderViewController.xib */,
+				CE6088822004C95D0057094C /* EncoderViewController+UITableView.swift */,
 			);
 			path = Encoder;
 			sourceTree = "<group>";
@@ -393,6 +401,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE6088792004C5E20057094C /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				CE60887E2004C7970057094C /* CoderTableViewCell.swift */,
+				CE60887F2004C7970057094C /* CoderTableViewCell.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		CE73A3317CECB82070AD608F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +491,7 @@
 				71A7A3F01F5AC04600A22496 /* InputDatasCollectionViewCell.xib in Resources */,
 				719B66541F5AA0B3007BA408 /* Assets.xcassets in Resources */,
 				71A7A3E01F5ABCDD00A22496 /* InputDatasViewController.xib in Resources */,
+				CE6088812004C7970057094C /* CoderTableViewCell.xib in Resources */,
 				71D5B7521F91C35800BDAE43 /* FirstViewController.xib in Resources */,
 				71B77FD61F5C330300E4C80B /* ResultToolsCollectionViewCell.xib in Resources */,
 				719B666A1F5AA210007BA408 /* ImageViewController.xib in Resources */,
@@ -566,6 +584,7 @@
 				713F023D1F640907002F78C1 /* HuffmanAPI.swift in Sources */,
 				71D2C2391F91F9B000E825F3 /* HuffmanResponse.swift in Sources */,
 				7175EF601F5AAAB5007A73AF /* Button.swift in Sources */,
+				CE6088802004C7970057094C /* CoderTableViewCell.swift in Sources */,
 				71D2C2361F91F95600E825F3 /* HuffmanSession.swift in Sources */,
 				7175EF5A1F5AA93F007A73AF /* DestinationImageView.swift in Sources */,
 				714694411F5AF413007E2555 /* DestinationEncoderView.swift in Sources */,
@@ -579,6 +598,7 @@
 				71D2C23B1F91F9E000E825F3 /* HuffmanRequest.swift in Sources */,
 				71A7A3DC1F5AB1B200A22496 /* DestinationFirstView.swift in Sources */,
 				71A7A3DF1F5ABCDD00A22496 /* InputDatasViewController.swift in Sources */,
+				CE6088832004C95D0057094C /* EncoderViewController+UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

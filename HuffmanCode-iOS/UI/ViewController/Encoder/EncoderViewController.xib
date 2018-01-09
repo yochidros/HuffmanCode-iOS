@@ -21,6 +21,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EncoderViewController" customModule="HuffmanCode_iOS" customModuleProvider="target">
             <connections>
                 <outlet property="resultLabel" destination="iMR-m4-5eX" id="QAg-7a-sdh"/>
+                <outlet property="tableView" destination="WRT-RL-U4N" id="Qt7-tl-d6p"/>
                 <outlet property="textField" destination="NPe-TB-gfq" id="KYK-6o-gLf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -30,14 +31,17 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please input string" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YO-b6-nTv">
-                    <rect key="frame" x="107" y="70" width="161.5" height="16"/>
-                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please input string" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YO-b6-nTv">
+                    <rect key="frame" x="107.5" y="70" width="160" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="qnD-RQ-TAi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3o1-ws-iyR" customClass="Button" customModule="HuffmanCode_iOS" customModuleProvider="target">
-                    <rect key="frame" x="88" y="211" width="200" height="48"/>
+                    <rect key="frame" x="87" y="357" width="200" height="48"/>
                     <color key="backgroundColor" red="0.30269136520000001" green="1" blue="0.22759069400000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="Daf-7B-eh3"/>
@@ -55,8 +59,22 @@
                         <action selector="didSelectEncode:" destination="-1" eventType="touchUpInside" id="sfK-oP-mbl"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMR-m4-5eX">
+                    <rect key="frame" x="16" y="437" width="343" height="24"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WRT-RL-U4N">
+                    <rect key="frame" x="65" y="102" width="245" height="160"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="245" id="4MU-c3-m1G"/>
+                        <constraint firstAttribute="height" constant="160" id="fi1-rv-Mb1"/>
+                    </constraints>
+                </tableView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NPe-TB-gfq">
-                    <rect key="frame" x="88" y="148" width="200" height="22"/>
+                    <rect key="frame" x="87" y="294" width="200" height="22"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="bg0-c8-kfA"/>
                     </constraints>
@@ -64,25 +82,20 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMR-m4-5eX">
-                    <rect key="frame" x="88" y="315" width="200" height="0.0"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="200" id="4KZ-3Z-24S"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="5YO-b6-nTv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="5ZW-jK-ZVe"/>
                 <constraint firstItem="iMR-m4-5eX" firstAttribute="centerX" secondItem="3o1-ws-iyR" secondAttribute="centerX" id="6p5-G6-Tr4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iMR-m4-5eX" secondAttribute="trailing" constant="16" id="IOw-Gt-eKb"/>
+                <constraint firstItem="NPe-TB-gfq" firstAttribute="top" secondItem="WRT-RL-U4N" secondAttribute="bottom" constant="32" id="LTa-cr-mcN"/>
                 <constraint firstItem="5YO-b6-nTv" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="OS9-dM-VgE"/>
+                <constraint firstItem="iMR-m4-5eX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="cG3-95-OwH"/>
                 <constraint firstItem="NPe-TB-gfq" firstAttribute="centerX" secondItem="5YO-b6-nTv" secondAttribute="centerX" id="hI9-8m-8Cj"/>
                 <constraint firstItem="3o1-ws-iyR" firstAttribute="centerX" secondItem="NPe-TB-gfq" secondAttribute="centerX" id="mpq-5v-sf2"/>
-                <constraint firstItem="NPe-TB-gfq" firstAttribute="top" secondItem="5YO-b6-nTv" secondAttribute="bottom" constant="62" id="oeU-0B-m5B"/>
-                <constraint firstItem="iMR-m4-5eX" firstAttribute="top" secondItem="3o1-ws-iyR" secondAttribute="bottom" constant="56" id="xm0-xF-FAi"/>
+                <constraint firstItem="WRT-RL-U4N" firstAttribute="centerX" secondItem="5YO-b6-nTv" secondAttribute="centerX" id="vBy-RT-CQR"/>
+                <constraint firstItem="iMR-m4-5eX" firstAttribute="top" secondItem="3o1-ws-iyR" secondAttribute="bottom" constant="32" id="xm0-xF-FAi"/>
+                <constraint firstItem="WRT-RL-U4N" firstAttribute="top" secondItem="5YO-b6-nTv" secondAttribute="bottom" constant="17" id="yVu-zj-Fk5"/>
                 <constraint firstItem="3o1-ws-iyR" firstAttribute="top" secondItem="NPe-TB-gfq" secondAttribute="bottom" constant="41" id="zgG-6c-qjN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

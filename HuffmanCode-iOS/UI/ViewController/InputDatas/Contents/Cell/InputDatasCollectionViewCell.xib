@@ -50,7 +50,7 @@
                             <constraint firstAttribute="height" constant="48" id="kQG-CA-N7Y"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
-                        <state key="normal" title="Calurate">
+                        <state key="normal" title="Calulate">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <userDefinedRuntimeAttributes>
@@ -62,7 +62,7 @@
                             <action selector="didSelectCalcuration" destination="gTV-IL-0wX" eventType="touchUpInside" id="Vw3-bL-Yyi"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="invalid input data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcZ-35-Hzv">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="invalid input data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcZ-35-Hzv">
                         <rect key="frame" x="121.5" y="1091" width="149" height="16"/>
                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
                         <color key="textColor" red="1" green="0.030338793039999999" blue="0.084111436169999998" alpha="1" colorSpace="calibratedRGB"/>

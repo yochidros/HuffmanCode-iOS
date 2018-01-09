@@ -12,9 +12,22 @@ class EncoderViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
 
+    @IBOutlet weak var tableView: UITableView!
+    var tableData: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Encode"
+        tableView.register(
+            UINib(nibName: "CoderTableViewCell", bundle: nil),
+            forCellReuseIdentifier: "cell"
+        )
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        HuffmanModel.share.result.forEach { (key, value) in
+            tableData.append("\(key):\(value)")
+        }
+        tableView.tableFooterView = UIView()
     }
 
     @IBAction func didSelectEncode(_ sender: Any) {
@@ -33,12 +46,15 @@ class EncoderViewController: UIViewController {
                 completeFlag = false
             }
         })
-        
-        resultLabel.text = completeFlag ? "\(encodeDatas)\n\(text)" : """
-        ERROR:
-        Can't encode from input string
-        (invalid string is \(invalidText),
-        it's not contain in previous Input datas.)
-        """
+        if !completeFlag {
+            resultLabel.text = """
+            ERROR:
+            Can't encode from input string
+            (invalid string is \(invalidText),
+            it's not contain in previous Input datas.)
+            """
+            return
+        }
+        resultLabel.text = "\(text)"
     }
 }
