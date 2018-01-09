@@ -14,7 +14,6 @@ class DecoderViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func didSelectDecode(_ sender: Any) {
@@ -22,7 +21,11 @@ class DecoderViewController: UIViewController {
         if checkBinaryCode(text: text) {
             resultLabel.text =  HuffmanViewModel().decode(string: text)
         }else {
-            resultLabel.text = "ERROR: It's contain character code!!\n Please input binary code!!"
+            resultLabel.text = """
+            ERROR: It's contain character code!!
+            Please input binary code!!
+            Example: 1011
+            """
         }
     }
     
@@ -30,7 +33,7 @@ class DecoderViewController: UIViewController {
         var flag = true
         text.characters.forEach { (c) in
             if c == "1" || c == "0" {
-            }else { flag = false }
+            } else { flag = false }
         }
         return flag
     }

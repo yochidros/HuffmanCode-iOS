@@ -19,6 +19,7 @@ final class HuffmanSession<T: Request>{
                 }
                 HuffmanModel.share.responseData = response
             case .failure(let error):
+                HuffmanModel.share.responseData = nil
                 print(error)
             }
         }

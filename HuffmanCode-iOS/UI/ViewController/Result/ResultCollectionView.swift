@@ -14,7 +14,6 @@ protocol ContentsViewDelegate:class {
 
 class ResultCollectionView: UICollectionView {
     weak var contentsDelegate: ContentsViewDelegate?
-    // TODO: sorted data
     var data: [String: Int] = [:] {
         didSet {
             data.sorted{ $0.1 < $1.1 }.forEach { (k,_) in

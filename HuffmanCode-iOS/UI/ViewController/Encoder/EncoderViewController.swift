@@ -20,6 +20,7 @@ class EncoderViewController: UIViewController {
     @IBAction func didSelectEncode(_ sender: Any) {
         var keys: [String] = []
         var text: String = ""
+        var invalidText: String = ""
         let encodeDatas = HuffmanModel.share.result
         let d = HuffmanModel.share.result
         d.keys.forEach({ keys.append($0) })
@@ -28,9 +29,16 @@ class EncoderViewController: UIViewController {
             if keys.contains(String(c)) {
                 text += HuffmanModel.share.result[String(c)]!
             }else {
+                invalidText += String(c)
                 completeFlag = false
             }
         })
-        resultLabel.text = completeFlag ? "\(encodeDatas)\n\(text)" : "ERROR: Can't encode from input string"
+        
+        resultLabel.text = completeFlag ? "\(encodeDatas)\n\(text)" : """
+        ERROR:
+        Can't encode from input string
+        (invalid string is \(invalidText),
+        it's not contain in previous Input datas.)
+        """
     }
 }

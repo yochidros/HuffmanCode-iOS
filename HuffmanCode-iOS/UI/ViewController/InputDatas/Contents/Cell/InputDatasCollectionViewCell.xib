@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,10 +33,10 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHd-AM-xXU">
-                        <rect key="frame" x="213" y="52" width="100" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency(%)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHd-AM-xXU">
+                        <rect key="frame" x="213" y="52" width="120" height="16"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="gYe-Ki-dol"/>
+                            <constraint firstAttribute="width" constant="120" id="gYe-Ki-dol"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
                         <nil key="textColor"/>
@@ -78,7 +78,7 @@
                 <constraint firstAttribute="bottom" secondItem="xza-1s-0nk" secondAttribute="bottom" constant="20" id="j2g-v2-DDe"/>
                 <constraint firstItem="WcZ-35-Hzv" firstAttribute="centerX" secondItem="xza-1s-0nk" secondAttribute="centerX" id="nT1-w7-ZPK"/>
                 <constraint firstItem="imY-Wu-ZSo" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="80" id="qea-un-UFD"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="zHd-AM-xXU" secondAttribute="trailing" constant="80" id="wsw-hD-q22"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="zHd-AM-xXU" secondAttribute="trailing" constant="60" id="wsw-hD-q22"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="393" height="1195"/>
