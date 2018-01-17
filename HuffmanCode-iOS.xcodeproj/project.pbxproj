@@ -55,6 +55,7 @@
 		CE6088812004C7970057094C /* CoderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE60887F2004C7970057094C /* CoderTableViewCell.xib */; };
 		CE6088832004C95D0057094C /* EncoderViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6088822004C95D0057094C /* EncoderViewController+UITableView.swift */; };
 		CE832F161F7751560064A2EE /* Huffman.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE832F151F7751560064A2EE /* Huffman.swift */; };
+		CE87747F200F2E170059057A /* DecodeViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87747E200F2E170059057A /* DecodeViewController+UITableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -122,6 +123,7 @@
 		CE60887F2004C7970057094C /* CoderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoderTableViewCell.xib; sourceTree = "<group>"; };
 		CE6088822004C95D0057094C /* EncoderViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncoderViewController+UITableView.swift"; sourceTree = "<group>"; };
 		CE832F151F7751560064A2EE /* Huffman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huffman.swift; sourceTree = "<group>"; };
+		CE87747E200F2E170059057A /* DecodeViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodeViewController+UITableView.swift"; sourceTree = "<group>"; };
 		EC30CEC045AAE5F9945E308E /* Pods-HuffmanCode-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuffmanCode-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuffmanCode-iOS/Pods-HuffmanCode-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 			children = (
 				714694381F5AEB29007E2555 /* DecoderViewController.swift */,
 				714694391F5AEB29007E2555 /* DecoderViewController.xib */,
+				CE87747E200F2E170059057A /* DecodeViewController+UITableView.swift */,
 			);
 			path = Decoder;
 			sourceTree = "<group>";
@@ -455,9 +458,8 @@
 				TargetAttributes = {
 					719B66481F5AA0B3007BA408 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = X25KZ54NYC;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -588,6 +590,7 @@
 				71D2C2361F91F95600E825F3 /* HuffmanSession.swift in Sources */,
 				7175EF5A1F5AA93F007A73AF /* DestinationImageView.swift in Sources */,
 				714694411F5AF413007E2555 /* DestinationEncoderView.swift in Sources */,
+				CE87747F200F2E170059057A /* DecodeViewController+UITableView.swift in Sources */,
 				7146943A1F5AEB29007E2555 /* DecoderViewController.swift in Sources */,
 				719B664D1F5AA0B3007BA408 /* AppDelegate.swift in Sources */,
 				7175EF501F5AA325007A73AF /* NSObjectExtension.swift in Sources */,
@@ -728,11 +731,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X25KZ54NYC;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/HuffmanCode-iOS/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yochio.HuffmanCode-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
@@ -744,11 +749,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X25KZ54NYC;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/HuffmanCode-iOS/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yochio.HuffmanCode-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};

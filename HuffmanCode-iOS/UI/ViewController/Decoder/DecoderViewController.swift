@@ -9,11 +9,27 @@
 import UIKit
 
 class DecoderViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
+
+    var tableData: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.register(
+            UINib(nibName: "CoderTableViewCell", bundle: nil),
+            forCellReuseIdentifier: "cell"
+        )
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        HuffmanModel.share.result.forEach { (key, value) in
+            tableData.append("\(key):\(value)")
+        }
+        tableView.tableFooterView = UIView()
     }
     
     @IBAction func didSelectDecode(_ sender: Any) {
