@@ -39,7 +39,7 @@ class FirstViewController: UIViewController {
                     self.nextButton.isEnabled = false
                     self.nextButton.tintColor = UIColor.white
                     self.nextButton.alpha = 0.2
-                    self.assertLabel.text = "It's contain character or others\n It should contain only number"
+                    self.assertLabel.text = "It's contain character or others\n Total frequecies must be 100(%)"
                     self.assertLabel.alpha = 1.0
                 }
                 
