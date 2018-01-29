@@ -18,7 +18,7 @@ class DecoderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Decode"
         tableView.register(
             UINib(nibName: "CoderTableViewCell", bundle: nil),
             forCellReuseIdentifier: "cell"
