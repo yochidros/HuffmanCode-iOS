@@ -72,6 +72,12 @@
                         <action selector="didSelectNext" destination="-1" eventType="touchUpInside" id="dm6-rN-De5"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(The maximum number is 100)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRF-m7-KTS">
+                    <rect key="frame" x="84.5" y="147" width="208.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -79,7 +85,9 @@
                 <constraint firstItem="u0V-vw-38y" firstAttribute="top" secondItem="M5n-gb-5C4" secondAttribute="bottom" constant="46" id="5pq-qo-Zp4"/>
                 <constraint firstItem="7OK-ed-N7N" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="103" id="5wh-Ab-ZUl"/>
                 <constraint firstItem="M5n-gb-5C4" firstAttribute="centerX" secondItem="7OK-ed-N7N" secondAttribute="centerX" id="GdK-DH-l8F"/>
+                <constraint firstItem="gRF-m7-KTS" firstAttribute="centerX" secondItem="7OK-ed-N7N" secondAttribute="centerX" id="HR8-gg-WjB"/>
                 <constraint firstItem="AOr-YC-VdC" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="IJh-Jg-G59"/>
+                <constraint firstItem="gRF-m7-KTS" firstAttribute="top" secondItem="7OK-ed-N7N" secondAttribute="bottom" constant="8" id="cLG-nE-QZ5"/>
                 <constraint firstItem="M5n-gb-5C4" firstAttribute="top" secondItem="7OK-ed-N7N" secondAttribute="bottom" constant="66" id="diZ-ZT-Fvz"/>
                 <constraint firstItem="7OK-ed-N7N" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="eJo-eL-lc5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="AOr-YC-VdC" secondAttribute="bottom" constant="180" id="px6-kB-umi"/>

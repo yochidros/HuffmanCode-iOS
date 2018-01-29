@@ -24,20 +24,35 @@ class ImageViewController: UIViewController {
         doubleTapRecognizer.numberOfTapsRequired = 2
         doubleTapRecognizer.addTarget(self, action: #selector(doubleTap(gesture:)))
         imageView.isUserInteractionEnabled = true
+        
         if let imageData = HuffmanModel.share.responseData {
             let imageURL = "https://s3-ap-northeast-1.amazonaws.com/projecthuffmancode/images/" + imageData.imageName
-            imageView.sd_setImage(with: URL(string: imageURL), completed: nil)
-        } else {
-            
-            let alert = UIAlertController(title: "Failed",
-                                          message: "Sorry, couldn't get image\n back previous page.",
-                                          preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in
-                self?.navigationController?.popViewController(animated: true)
+            imageView.sd_setImage(
+                with: URL(string: imageURL),
+                placeholderImage: nil,
+                options: [.highPriority],
+                completed: { [weak imageView] (image, error, _, _) in
+                    if image != nil {
+                        imageView?.image = image
+                    } else {
+                        self.showErrorAlert()
+                        
+                    }
             })
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
+        } else {
+            self.showErrorAlert()
         }
+    }
+    
+    private func showErrorAlert() {
+        let alert = UIAlertController(title: "Failed",
+                                      message: "Sorry, couldn't get image\n back previous page.",
+                                      preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+        })
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
     
     @objc func doubleTap(gesture: UITapGestureRecognizer) -> Void {

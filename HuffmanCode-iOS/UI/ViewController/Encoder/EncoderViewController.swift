@@ -24,7 +24,7 @@ class EncoderViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        HuffmanModel.share.result.forEach { (key, value) in
+        HuffmanModel.share.result.sorted { $0.0 < $1.0 }.forEach { (key, value) in
             tableData.append("\(key):\(value)")
         }
         tableView.tableFooterView = UIView()

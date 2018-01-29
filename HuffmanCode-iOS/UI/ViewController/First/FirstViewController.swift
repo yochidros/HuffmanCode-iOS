@@ -39,7 +39,7 @@ class FirstViewController: UIViewController {
                     self.nextButton.isEnabled = false
                     self.nextButton.tintColor = UIColor.white
                     self.nextButton.alpha = 0.2
-                    self.assertLabel.text = "It's contain character or others\n Total frequecies must be 100(%)"
+                    self.assertLabel.text = "It's contain character or invalid number"
                     self.assertLabel.alpha = 1.0
                 }
                 
@@ -60,7 +60,7 @@ class FirstViewController: UIViewController {
     @IBAction func didSelectNext(){
         if let text = textField.text,let num = Int(text){
             if num <= 0 || 100 < num {
-                assertLabel.text = "please input number \n without 0 or minus number"
+                assertLabel.text = "please input number \n without 0 or minus number\n maximum number is 100!!"
                 assertLabel.alpha = 1.0
             } else {
                 self.transition(to: DestinationInputDatasView(count: num))
