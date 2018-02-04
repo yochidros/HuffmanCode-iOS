@@ -53,7 +53,7 @@
                     </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOr-YC-VdC" customClass="Button" customModule="HuffmanCode_iOS" customModuleProvider="target">
-                    <rect key="frame" x="88" y="439" width="200" height="48"/>
+                    <rect key="frame" x="88" y="347" width="200" height="48"/>
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="c2y-N6-GwX"/>
@@ -90,7 +90,7 @@
                 <constraint firstItem="gRF-m7-KTS" firstAttribute="top" secondItem="7OK-ed-N7N" secondAttribute="bottom" constant="8" id="cLG-nE-QZ5"/>
                 <constraint firstItem="M5n-gb-5C4" firstAttribute="top" secondItem="7OK-ed-N7N" secondAttribute="bottom" constant="66" id="diZ-ZT-Fvz"/>
                 <constraint firstItem="7OK-ed-N7N" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="eJo-eL-lc5"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="AOr-YC-VdC" secondAttribute="bottom" constant="180" id="px6-kB-umi"/>
+                <constraint firstItem="AOr-YC-VdC" firstAttribute="top" secondItem="M5n-gb-5C4" secondAttribute="bottom" constant="120" id="wtH-Hp-w5h"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

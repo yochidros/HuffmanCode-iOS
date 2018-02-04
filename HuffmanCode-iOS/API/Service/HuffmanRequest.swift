@@ -14,7 +14,7 @@ protocol HuffmanRequest: Request {
 
 extension HuffmanRequest {
     var baseURL: URL {
-        return URL(string: "http://localhost:8000")!
+        return URL(string: "http://huffman-code-project.tk")!
     }
 }
 

@@ -25,6 +25,10 @@ class ImageViewController: UIViewController {
         doubleTapRecognizer.addTarget(self, action: #selector(doubleTap(gesture:)))
         imageView.isUserInteractionEnabled = true
         
+       loadImage()
+    }
+    
+    private func loadImage() {
         if let imageData = HuffmanModel.share.responseData {
             let imageURL = "https://s3-ap-northeast-1.amazonaws.com/projecthuffmancode/images/" + imageData.imageName
             imageView.sd_setImage(
@@ -36,7 +40,6 @@ class ImageViewController: UIViewController {
                         imageView?.image = image
                     } else {
                         self.showErrorAlert()
-                        
                     }
             })
         } else {
@@ -46,12 +49,17 @@ class ImageViewController: UIViewController {
     
     private func showErrorAlert() {
         let alert = UIAlertController(title: "Failed",
-                                      message: "Sorry, couldn't get image\n back previous page.",
+                                      message: "Sorry, couldn't get image\n Do you want to reload?",
                                       preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in
+        let action = UIAlertAction(title: "Reload", style: .default, handler: { [weak self] _ in
+            self?.loadImage()
+        })
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: { [weak self] _ in
             self?.navigationController?.popViewController(animated: true)
+
         })
         alert.addAction(action)
+        alert.addAction(cancel)
         self.present(alert, animated: true, completion: nil)
     }
     
