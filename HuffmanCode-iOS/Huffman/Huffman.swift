@@ -13,13 +13,14 @@ class HuffmanModel {
     var frequency: [String: Int] = [:]
     var result: [String: String] = [:]
     var tree = Dictionary<String, Any>()
+    var responseData: HuffmanResponse?
 }
 
 class HuffmanViewModel {
     
     func huffman_code(freq: [String: Int]){
         HuffmanModel.share.frequency = freq
-        
+        HuffmanModel.share.result.removeAll()
         var vals: [String: Int] = freq
         var nodes = Dictionary<String, Any>()
         
@@ -58,7 +59,7 @@ class HuffmanViewModel {
         }
         _ = assign_code(nodes: nodes, label: root, result: [:])
         
-        HuffmanSession().session(request: HuffmanAPI.PostHuffmanData())
+        HuffmanSession.session(request: HuffmanAPI.PostHuffmanData())
     }
   
     private func assign_code(nodes: Dictionary<String, Any> , label: String, result: [String: String], prefix: String = "") -> String{

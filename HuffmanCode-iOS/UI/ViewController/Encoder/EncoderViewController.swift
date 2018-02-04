@@ -12,29 +12,49 @@ class EncoderViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
 
+    @IBOutlet weak var tableView: UITableView!
+    var tableData: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Encode"
+        tableView.register(
+            UINib(nibName: "CoderTableViewCell", bundle: nil),
+            forCellReuseIdentifier: "cell"
+        )
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        HuffmanModel.share.result.sorted { $0.0 < $1.0 }.forEach { (key, value) in
+            tableData.append("\(key):\(value)")
+        }
+        tableView.tableFooterView = UIView()
     }
 
     @IBAction func didSelectEncode(_ sender: Any) {
         var keys: [String] = []
         var text: String = ""
+        var invalidText: String = ""
         let encodeDatas = HuffmanModel.share.result
         let d = HuffmanModel.share.result
-        d.keys.forEach { (key) in
-            keys.append(key)
-        }
+        d.keys.forEach({ keys.append($0) })
         var completeFlag = true
         textField.text?.characters.forEach({ (c) in
             if keys.contains(String(c)) {
                 text += HuffmanModel.share.result[String(c)]!
-//                text = text + HuffmanCode.shared.huffmanData.huffmanEncode[String(c)]!
             }else {
+                invalidText += String(c)
                 completeFlag = false
             }
         })
-//        text = Huffman3.share.encode(text: textField.text!)
-        resultLabel.text = completeFlag ? "\(encodeDatas)\n\(text)" : "ERROR: Can't encode from input string"
+        if !completeFlag {
+            resultLabel.text = """
+            ERROR:
+            Can't encode from input string
+            (invalid string is \(invalidText),
+            it's not contain in previous Input datas.)
+            """
+            return
+        }
+        resultLabel.text = "\(text)"
     }
 }

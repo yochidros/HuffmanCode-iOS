@@ -25,7 +25,7 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func textFieldEditing(_ sender: Any) {
-        if let count = textField.text?.characters.count, count != 0{
+        if let count = textField.text?.characters.count, count != 0 {
             if textField.identifyforOnlyNumber(string: textField.text){
                 animate{
                     self.nextButton.isEnabled = true
@@ -39,7 +39,7 @@ class FirstViewController: UIViewController {
                     self.nextButton.isEnabled = false
                     self.nextButton.tintColor = UIColor.white
                     self.nextButton.alpha = 0.2
-                    self.assertLabel.text = "It's contain character or others\n It should contain only number"
+                    self.assertLabel.text = "It's contain character or invalid number"
                     self.assertLabel.alpha = 1.0
                 }
                 
@@ -59,10 +59,10 @@ class FirstViewController: UIViewController {
     
     @IBAction func didSelectNext(){
         if let text = textField.text,let num = Int(text){
-            if num <= 0{
-                assertLabel.text = "please input number \n without 0 or minus number"
+            if num <= 0 || 100 < num {
+                assertLabel.text = "please input number \n without 0 or minus number\n maximum number is 100!!"
                 assertLabel.alpha = 1.0
-            }else {
+            } else {
                 self.transition(to: DestinationInputDatasView(count: num))
             }
         }
