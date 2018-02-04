@@ -16,7 +16,7 @@ class DecoderViewController: UIViewController {
 
     var tableData: [String] = []
     
-    override func viewDidLoad() {
+    override funxc viewDidLoad() {
         super.viewDidLoad()
         title = "Decode"
         tableView.register(
