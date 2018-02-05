@@ -22,7 +22,10 @@ platform :ios do
   
   desc "Runs all the unit and ui test"
   lane :test do
-      scan
+      scan(
+        scheme: "HuffmanCode-iOS",
+        clean: true
+      )
   end
 
   desc "Push a new beta build to TestFlight"
