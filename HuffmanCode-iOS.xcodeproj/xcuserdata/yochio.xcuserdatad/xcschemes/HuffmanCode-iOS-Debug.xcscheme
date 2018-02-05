@@ -33,7 +33,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE3C66C8202802F000218A57"
+               BlueprintIdentifier = "CE01E9992028270600E3F34D"
                BuildableName = "HuffmanCode-iOSTests.xctest"
                BlueprintName = "HuffmanCode-iOSTests"
                ReferencedContainer = "container:HuffmanCode-iOS.xcodeproj">

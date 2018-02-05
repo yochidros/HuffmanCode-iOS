@@ -5,7 +5,6 @@
 //  Created by 宮澤賢生 on 2017/09/24.
 //  Copyright © 2017年 yochio. All rights reserved.
 //
-
 import Foundation
 
 class HuffmanModel {
@@ -44,7 +43,7 @@ class HuffmanViewModel {
             }
             if let k1 = vals[a1.key], let k2 = vals[a2.key] {
                 vals[a1.key + a2.key] = k1 + k2
-            }            
+            }
             vals.removeValue(forKey: a1.key)
             vals.removeValue(forKey: a2.key)
             nodes[a1.key + a2.key] = [a1.key, a2.key]
@@ -61,7 +60,7 @@ class HuffmanViewModel {
         
         HuffmanSession.session(request: HuffmanAPI.PostHuffmanData())
     }
-  
+    
     private func assign_code(nodes: Dictionary<String, Any> , label: String, result: [String: String], prefix: String = "") -> String{
         let childs : [String] = nodes[label] as! [String]
         var tree = Dictionary<String,Any>()
