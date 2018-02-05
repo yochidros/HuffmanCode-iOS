@@ -16,9 +16,10 @@ CONF = YAML.load_file('conf.yml')
 
 platform :ios do
   before_all do
+    cocoapods
     ENV["SLACK_URL"] = CONF["slack"]["webhookurl"]
   end
-
+  
   desc "Runs all the unit and ui test"
   lane :test do
     scan(
@@ -29,6 +30,12 @@ platform :ios do
 
   desc "Push a new beta build to TestFlight"
   lane :beta do
+    sigh
+    disable_automatic_code_signing(path: "HuffmanCode-iOS.xcodeproj")
+    gym(
+      xcargs: "CODE_SIGN_IDENTITY='iPhone Distribution: Yoshiki Miyazawa'"
+    )
+    enable_automatic_code_signing(path: "HuffmanCode-iOS.xcodeproj")
     build_app(workspace: "HuffmanCode-iOS.xcworkspace", scheme: "HuffmanCode-iOS")
     upload_to_testflight
   end

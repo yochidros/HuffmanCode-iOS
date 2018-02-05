@@ -1,2 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites tests='0' failures='0'/>
+<testsuites name='HuffmanCode-iOSTests.xctest' tests='2' failures='0'>
+  <testsuite name='HuffmanCode_iOSTests.HuffmanCode_iOSTests' tests='2' failures='0'>
+    <testcase classname='HuffmanCode_iOSTests.HuffmanCode_iOSTests' name='testExample' time='0.001'/>
+    <testcase classname='HuffmanCode_iOSTests.HuffmanCode_iOSTests' name='testPerformanceExample' time='0.410'/>
+  </testsuite>
+</testsuites>
