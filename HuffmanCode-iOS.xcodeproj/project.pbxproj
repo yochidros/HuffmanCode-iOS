@@ -52,10 +52,14 @@
 		71DCA89D1F5AE17800894BA3 /* DestinationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89C1F5AE17800894BA3 /* DestinationResultView.swift */; };
 		774D374AE8B5DB9026B1F919 /* Pods_HuffmanCode_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C3FBEF395073E92539F75B /* Pods_HuffmanCode_iOS.framework */; };
 		CE01E99D2028270600E3F34D /* HuffmanCode_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01E99C2028270600E3F34D /* HuffmanCode_iOSTests.swift */; };
+		CE01E9A62028290500E3F34D /* Huffman.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01E9A52028290500E3F34D /* Huffman.swift */; };
+		CE01E9A92028294400E3F34D /* CoderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE01E9A72028294300E3F34D /* CoderTableViewCell.xib */; };
+		CE01E9AA2028294400E3F34D /* CoderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01E9A82028294400E3F34D /* CoderTableViewCell.swift */; };
+		CE01E9AC2028294D00E3F34D /* EncoderViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01E9AB2028294D00E3F34D /* EncoderViewController+UITableView.swift */; };
+		CE01E9AE2028295600E3F34D /* DecodeViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01E9AD2028295600E3F34D /* DecodeViewController+UITableView.swift */; };
 		CE6088802004C7970057094C /* (null) in Sources */ = {isa = PBXBuildFile; };
 		CE6088812004C7970057094C /* (null) in Resources */ = {isa = PBXBuildFile; };
 		CE6088832004C95D0057094C /* (null) in Sources */ = {isa = PBXBuildFile; };
-		CE832F161F7751560064A2EE /* Huffman3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE832F151F7751560064A2EE /* Huffman3.swift */; };
 		CE87747F200F2E170059057A /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
@@ -135,7 +139,11 @@
 		CE01E99A2028270600E3F34D /* HuffmanCode-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HuffmanCode-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE01E99C2028270600E3F34D /* HuffmanCode_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuffmanCode_iOSTests.swift; sourceTree = "<group>"; };
 		CE01E99E2028270600E3F34D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE832F151F7751560064A2EE /* Huffman3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huffman3.swift; sourceTree = "<group>"; };
+		CE01E9A52028290500E3F34D /* Huffman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huffman.swift; sourceTree = "<group>"; };
+		CE01E9A72028294300E3F34D /* CoderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoderTableViewCell.xib; sourceTree = "<group>"; };
+		CE01E9A82028294400E3F34D /* CoderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoderTableViewCell.swift; sourceTree = "<group>"; };
+		CE01E9AB2028294D00E3F34D /* EncoderViewController+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EncoderViewController+UITableView.swift"; sourceTree = "<group>"; };
+		CE01E9AD2028295600E3F34D /* DecodeViewController+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DecodeViewController+UITableView.swift"; sourceTree = "<group>"; };
 		EC30CEC045AAE5F9945E308E /* Pods-HuffmanCode-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuffmanCode-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuffmanCode-iOS/Pods-HuffmanCode-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +179,7 @@
 		714694361F5AEAF4007E2555 /* Encoder */ = {
 			isa = PBXGroup;
 			children = (
+				CE01E9AB2028294D00E3F34D /* EncoderViewController+UITableView.swift */,
 				CE6088792004C5E20057094C /* TableView */,
 				7146943C1F5AEB46007E2555 /* EncoderViewController.swift */,
 				7146943D1F5AEB46007E2555 /* EncoderViewController.xib */,
@@ -181,6 +190,7 @@
 		714694371F5AEAFD007E2555 /* Decoder */ = {
 			isa = PBXGroup;
 			children = (
+				CE01E9AD2028295600E3F34D /* DecodeViewController+UITableView.swift */,
 				714694381F5AEB29007E2555 /* DecoderViewController.swift */,
 				714694391F5AEB29007E2555 /* DecoderViewController.xib */,
 			);
@@ -412,7 +422,7 @@
 		71DCA89E1F5AE43700894BA3 /* Huffman */ = {
 			isa = PBXGroup;
 			children = (
-				CE832F151F7751560064A2EE /* Huffman3.swift */,
+				CE01E9A52028290500E3F34D /* Huffman.swift */,
 			);
 			path = Huffman;
 			sourceTree = "<group>";
@@ -437,6 +447,8 @@
 		CE6088792004C5E20057094C /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				CE01E9A82028294400E3F34D /* CoderTableViewCell.swift */,
+				CE01E9A72028294300E3F34D /* CoderTableViewCell.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -511,7 +523,7 @@
 					CE01E9992028270600E3F34D = {
 						CreatedOnToolsVersion = 9.2;
 						DevelopmentTeam = E296FA364F;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = 719B66481F5AA0B3007BA408;
 					};
 				};
@@ -549,6 +561,7 @@
 				71A7A3E01F5ABCDD00A22496 /* InputDatasViewController.xib in Resources */,
 				CE6088812004C7970057094C /* (null) in Resources */,
 				71D5B7521F91C35800BDAE43 /* FirstViewController.xib in Resources */,
+				CE01E9A92028294400E3F34D /* CoderTableViewCell.xib in Resources */,
 				71B77FD61F5C330300E4C80B /* ResultToolsCollectionViewCell.xib in Resources */,
 				719B666A1F5AA210007BA408 /* ImageViewController.xib in Resources */,
 				7175EF5E1F5AAAA7007A73AF /* ResultViewController.xib in Resources */,
@@ -629,10 +642,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				714694451F5B08B6007E2555 /* DestinationDecoderView.swift in Sources */,
-				CE832F161F7751560064A2EE /* Huffman3.swift in Sources */,
+				CE01E9A62028290500E3F34D /* Huffman.swift in Sources */,
 				71B77FD11F5C2EB400E4C80B /* ResultContentsCollectionViewCell.swift in Sources */,
+				CE01E9AC2028294D00E3F34D /* EncoderViewController+UITableView.swift in Sources */,
 				71A7A3E21F5ABD0C00A22496 /* DestinationInputDatasView.swift in Sources */,
 				71A7A3E51F5ABEB800A22496 /* InputDatasCollectionView.swift in Sources */,
+				CE01E9AE2028295600E3F34D /* DecodeViewController+UITableView.swift in Sources */,
 				7175EF571F5AA743007A73AF /* Transition.swift in Sources */,
 				71B77FD51F5C330300E4C80B /* ResultToolsCollectionViewCell.swift in Sources */,
 				71A7A3EF1F5AC04600A22496 /* InputDatasCollectionViewCell.swift in Sources */,
@@ -659,6 +674,7 @@
 				71DCA89D1F5AE17800894BA3 /* DestinationResultView.swift in Sources */,
 				71A7A3E91F5ABFAF00A22496 /* UICollectionViewExtension.swift in Sources */,
 				71DCA89B1F5AD50100894BA3 /* InputDatasAction.swift in Sources */,
+				CE01E9AA2028294400E3F34D /* CoderTableViewCell.swift in Sources */,
 				71D2C23B1F91F9E000E825F3 /* HuffmanRequest.swift in Sources */,
 				71A7A3DC1F5AB1B200A22496 /* DestinationFirstView.swift in Sources */,
 				71A7A3DF1F5ABCDD00A22496 /* InputDatasViewController.swift in Sources */,
@@ -847,7 +863,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = E296FA364F;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "HuffmanCode-iOSTests/Info.plist";
@@ -855,6 +871,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "yochio.HuffmanCode-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HuffmanCode-iOS.app/HuffmanCode-iOS";
@@ -868,7 +885,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = E296FA364F;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "HuffmanCode-iOSTests/Info.plist";
@@ -876,6 +893,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "yochio.HuffmanCode-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HuffmanCode-iOS.app/HuffmanCode-iOS";
