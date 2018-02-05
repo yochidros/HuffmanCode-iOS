@@ -31,12 +31,12 @@ platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
     sigh
-    disable_automatic_code_signing(path: "HuffmanCode-iOS.xcodeproj")
-    gym(
-      xcargs: "CODE_SIGN_IDENTITY='iPhone Distribution: Yoshiki Miyazawa'"
+    gym(scheme: "HuffmanCode-iOS", silent: true)
+    build_app(
+      scheme: "HuffmanCode-iOS",
+      workspace: "HuffmanCode-iOS.xcworkspace",
+      include_bitcode: true
     )
-    enable_automatic_code_signing(path: "HuffmanCode-iOS.xcodeproj")
-    build_app(workspace: "HuffmanCode-iOS.xcworkspace", scheme: "HuffmanCode-iOS")
     upload_to_testflight
   end
 
