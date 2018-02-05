@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DecoderViewController" customModule="HuffmanCode_iOS" customModuleProvider="target">
             <connections>
                 <outlet property="resultLabel" destination="V30-Ks-M9Y" id="YnT-Aq-U8B"/>
+                <outlet property="tableView" destination="V6h-S4-Ctg" id="CWb-BX-Bqc"/>
                 <outlet property="textField" destination="71o-Uu-HPp" id="8ZM-KS-O5v"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,14 +23,22 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V6h-S4-Ctg">
+                    <rect key="frame" x="65" y="106" width="245" height="160"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="245" id="Kos-EQ-s3w"/>
+                        <constraint firstAttribute="height" constant="160" id="ebT-tN-GB4"/>
+                    </constraints>
+                </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please input binaryCode  with Huffman Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTG-IQ-teu">
                     <rect key="frame" x="92" y="57" width="190.5" height="41"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLi-bo-idq" customClass="Button" customModule="HuffmanCode_iOS" customModuleProvider="target">
-                    <rect key="frame" x="87" y="202" width="200" height="48"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLi-bo-idq" customClass="Button" customModule="HuffmanCode_iOS" customModuleProvider="target">
+                    <rect key="frame" x="87" y="356" width="200" height="48"/>
                     <color key="backgroundColor" red="0.30269136520000001" green="1" blue="0.22759069400000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="njd-Sw-SoI"/>
@@ -47,8 +56,14 @@
                         <action selector="didSelectDecode:" destination="-1" eventType="touchUpInside" id="ZE4-vC-ojY"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V30-Ks-M9Y">
+                    <rect key="frame" x="87" y="478" width="200" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="71o-Uu-HPp">
-                    <rect key="frame" x="87" y="139" width="200" height="22"/>
+                    <rect key="frame" x="87.5" y="308" width="200" height="22"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="wVx-fh-zIU"/>
                     </constraints>
@@ -56,12 +71,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V30-Ks-M9Y">
-                    <rect key="frame" x="87" y="309" width="200" height="0.0"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -69,11 +78,14 @@
                 <constraint firstItem="V30-Ks-M9Y" firstAttribute="width" secondItem="NLi-bo-idq" secondAttribute="width" id="HfX-lr-xzX"/>
                 <constraint firstItem="WTG-IQ-teu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="37" id="OOz-78-4L9"/>
                 <constraint firstItem="V30-Ks-M9Y" firstAttribute="centerX" secondItem="NLi-bo-idq" secondAttribute="centerX" id="QXp-Ar-sqt"/>
+                <constraint firstItem="V6h-S4-Ctg" firstAttribute="centerX" secondItem="WTG-IQ-teu" secondAttribute="centerX" id="RAC-AD-nby"/>
+                <constraint firstItem="71o-Uu-HPp" firstAttribute="centerX" secondItem="V6h-S4-Ctg" secondAttribute="centerX" id="Ugo-ri-LNf"/>
                 <constraint firstItem="71o-Uu-HPp" firstAttribute="centerX" secondItem="WTG-IQ-teu" secondAttribute="centerX" id="Uu4-VZ-6cw"/>
                 <constraint firstItem="NLi-bo-idq" firstAttribute="top" secondItem="71o-Uu-HPp" secondAttribute="bottom" constant="41" id="VZc-Zb-ki0"/>
                 <constraint firstItem="V30-Ks-M9Y" firstAttribute="top" secondItem="NLi-bo-idq" secondAttribute="bottom" constant="59" id="Y5j-z5-mo2"/>
-                <constraint firstItem="71o-Uu-HPp" firstAttribute="top" secondItem="WTG-IQ-teu" secondAttribute="bottom" constant="41" id="bEq-P8-mWv"/>
                 <constraint firstItem="WTG-IQ-teu" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ieE-c5-PYY"/>
+                <constraint firstItem="V6h-S4-Ctg" firstAttribute="top" secondItem="WTG-IQ-teu" secondAttribute="bottom" constant="8" id="s6c-rG-qOf"/>
+                <constraint firstItem="71o-Uu-HPp" firstAttribute="top" secondItem="V6h-S4-Ctg" secondAttribute="bottom" constant="42" id="xq1-bL-50C"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

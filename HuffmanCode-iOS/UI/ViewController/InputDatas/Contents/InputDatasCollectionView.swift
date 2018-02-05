@@ -36,7 +36,6 @@ class InputDatasCollectionView: UICollectionView {
         register(cellType: InputDatasCollectionViewCell.self)
         dataSource = self
         delegate = self
-        reloadData()
     }
     
     func cellHeight(count: Int) -> CGFloat{

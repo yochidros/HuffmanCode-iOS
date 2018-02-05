@@ -51,8 +51,23 @@
 		71DCA89B1F5AD50100894BA3 /* InputDatasAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89A1F5AD50100894BA3 /* InputDatasAction.swift */; };
 		71DCA89D1F5AE17800894BA3 /* DestinationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCA89C1F5AE17800894BA3 /* DestinationResultView.swift */; };
 		774D374AE8B5DB9026B1F919 /* Pods_HuffmanCode_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C3FBEF395073E92539F75B /* Pods_HuffmanCode_iOS.framework */; };
-		CE832F161F7751560064A2EE /* Huffman3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE832F151F7751560064A2EE /* Huffman3.swift */; };
+		CE3C66CC202802F100218A57 /* HuffmanCode_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C66CB202802F100218A57 /* HuffmanCode_iOSTests.swift */; };
+		CE6088802004C7970057094C /* CoderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE60887E2004C7970057094C /* CoderTableViewCell.swift */; };
+		CE6088812004C7970057094C /* CoderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE60887F2004C7970057094C /* CoderTableViewCell.xib */; };
+		CE6088832004C95D0057094C /* EncoderViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6088822004C95D0057094C /* EncoderViewController+UITableView.swift */; };
+		CE832F161F7751560064A2EE /* Huffman.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE832F151F7751560064A2EE /* Huffman.swift */; };
+		CE87747F200F2E170059057A /* DecodeViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87747E200F2E170059057A /* DecodeViewController+UITableView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE3C66CE202802F100218A57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 719B66411F5AA0B3007BA408 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 719B66481F5AA0B3007BA408;
+			remoteInfo = "HuffmanCode-iOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		717603981F63879400272C96 /* Embed Frameworks */ = {
@@ -115,7 +130,14 @@
 		71D5B7511F91C35800BDAE43 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		71DCA89A1F5AD50100894BA3 /* InputDatasAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDatasAction.swift; sourceTree = "<group>"; };
 		71DCA89C1F5AE17800894BA3 /* DestinationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationResultView.swift; sourceTree = "<group>"; };
-		CE832F151F7751560064A2EE /* Huffman3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huffman3.swift; sourceTree = "<group>"; };
+		CE3C66C9202802F000218A57 /* HuffmanCode-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HuffmanCode-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3C66CB202802F100218A57 /* HuffmanCode_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuffmanCode_iOSTests.swift; sourceTree = "<group>"; };
+		CE3C66CD202802F100218A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE60887E2004C7970057094C /* CoderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoderTableViewCell.swift; sourceTree = "<group>"; };
+		CE60887F2004C7970057094C /* CoderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoderTableViewCell.xib; sourceTree = "<group>"; };
+		CE6088822004C95D0057094C /* EncoderViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncoderViewController+UITableView.swift"; sourceTree = "<group>"; };
+		CE832F151F7751560064A2EE /* Huffman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huffman.swift; sourceTree = "<group>"; };
+		CE87747E200F2E170059057A /* DecodeViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodeViewController+UITableView.swift"; sourceTree = "<group>"; };
 		EC30CEC045AAE5F9945E308E /* Pods-HuffmanCode-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuffmanCode-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuffmanCode-iOS/Pods-HuffmanCode-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +147,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				774D374AE8B5DB9026B1F919 /* Pods_HuffmanCode_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE3C66C6202802F000218A57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,8 +173,10 @@
 		714694361F5AEAF4007E2555 /* Encoder */ = {
 			isa = PBXGroup;
 			children = (
+				CE6088792004C5E20057094C /* TableView */,
 				7146943C1F5AEB46007E2555 /* EncoderViewController.swift */,
 				7146943D1F5AEB46007E2555 /* EncoderViewController.xib */,
+				CE6088822004C95D0057094C /* EncoderViewController+UITableView.swift */,
 			);
 			path = Encoder;
 			sourceTree = "<group>";
@@ -155,6 +186,7 @@
 			children = (
 				714694381F5AEB29007E2555 /* DecoderViewController.swift */,
 				714694391F5AEB29007E2555 /* DecoderViewController.xib */,
+				CE87747E200F2E170059057A /* DecodeViewController+UITableView.swift */,
 			);
 			path = Decoder;
 			sourceTree = "<group>";
@@ -184,6 +216,7 @@
 		719B66401F5AA0B3007BA408 = {
 			isa = PBXGroup;
 			children = (
+				CE3C66CA202802F100218A57 /* HuffmanCode-iOSTests */,
 				C92B6711D446649D28B7D1B3 /* Frameworks */,
 				719B664B1F5AA0B3007BA408 /* HuffmanCode-iOS */,
 				CE73A3317CECB82070AD608F /* Pods */,
@@ -195,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				719B66491F5AA0B3007BA408 /* HuffmanCode-iOS.app */,
+				CE3C66C9202802F000218A57 /* HuffmanCode-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -380,7 +414,7 @@
 		71DCA89E1F5AE43700894BA3 /* Huffman */ = {
 			isa = PBXGroup;
 			children = (
-				CE832F151F7751560064A2EE /* Huffman3.swift */,
+				CE832F151F7751560064A2EE /* Huffman.swift */,
 			);
 			path = Huffman;
 			sourceTree = "<group>";
@@ -391,6 +425,24 @@
 				67C3FBEF395073E92539F75B /* Pods_HuffmanCode_iOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE3C66CA202802F100218A57 /* HuffmanCode-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE3C66CB202802F100218A57 /* HuffmanCode_iOSTests.swift */,
+				CE3C66CD202802F100218A57 /* Info.plist */,
+			);
+			path = "HuffmanCode-iOSTests";
+			sourceTree = "<group>";
+		};
+		CE6088792004C5E20057094C /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				CE60887E2004C7970057094C /* CoderTableViewCell.swift */,
+				CE60887F2004C7970057094C /* CoderTableViewCell.xib */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		CE73A3317CECB82070AD608F /* Pods */ = {
@@ -426,13 +478,31 @@
 			productReference = 719B66491F5AA0B3007BA408 /* HuffmanCode-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CE3C66C8202802F000218A57 /* HuffmanCode-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE3C66D2202802F100218A57 /* Build configuration list for PBXNativeTarget "HuffmanCode-iOSTests" */;
+			buildPhases = (
+				CE3C66C5202802F000218A57 /* Sources */,
+				CE3C66C6202802F000218A57 /* Frameworks */,
+				CE3C66C7202802F000218A57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE3C66CF202802F100218A57 /* PBXTargetDependency */,
+			);
+			name = "HuffmanCode-iOSTests";
+			productName = "HuffmanCode-iOSTests";
+			productReference = CE3C66C9202802F000218A57 /* HuffmanCode-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		719B66411F5AA0B3007BA408 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = yochio;
 				TargetAttributes = {
@@ -440,7 +510,13 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = X25KZ54NYC;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
+					};
+					CE3C66C8202802F000218A57 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = E296FA364F;
 						ProvisioningStyle = Automatic;
+						TestTargetID = 719B66481F5AA0B3007BA408;
 					};
 				};
 			};
@@ -458,6 +534,7 @@
 			projectRoot = "";
 			targets = (
 				719B66481F5AA0B3007BA408 /* HuffmanCode-iOS */,
+				CE3C66C8202802F000218A57 /* HuffmanCode-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -474,11 +551,19 @@
 				71A7A3F01F5AC04600A22496 /* InputDatasCollectionViewCell.xib in Resources */,
 				719B66541F5AA0B3007BA408 /* Assets.xcassets in Resources */,
 				71A7A3E01F5ABCDD00A22496 /* InputDatasViewController.xib in Resources */,
+				CE6088812004C7970057094C /* CoderTableViewCell.xib in Resources */,
 				71D5B7521F91C35800BDAE43 /* FirstViewController.xib in Resources */,
 				71B77FD61F5C330300E4C80B /* ResultToolsCollectionViewCell.xib in Resources */,
 				719B666A1F5AA210007BA408 /* ImageViewController.xib in Resources */,
 				7175EF5E1F5AAAA7007A73AF /* ResultViewController.xib in Resources */,
 				71B77FD21F5C2EB400E4C80B /* ResultContentsCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE3C66C7202802F000218A57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,14 +577,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HuffmanCode-iOS/Pods-HuffmanCode-iOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Himotoki/Himotoki.framework",
+				"${BUILT_PRODUCTS_DIR}/APIKit/APIKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Himotoki.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APIKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,7 +607,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B4CE9442E8379E70A34D663B /* [CP] Copy Pods Resources */ = {
@@ -548,7 +633,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				714694451F5B08B6007E2555 /* DestinationDecoderView.swift in Sources */,
-				CE832F161F7751560064A2EE /* Huffman3.swift in Sources */,
+				CE832F161F7751560064A2EE /* Huffman.swift in Sources */,
 				71B77FD11F5C2EB400E4C80B /* ResultContentsCollectionViewCell.swift in Sources */,
 				71A7A3E21F5ABD0C00A22496 /* DestinationInputDatasView.swift in Sources */,
 				71A7A3E51F5ABEB800A22496 /* InputDatasCollectionView.swift in Sources */,
@@ -566,9 +651,11 @@
 				713F023D1F640907002F78C1 /* HuffmanAPI.swift in Sources */,
 				71D2C2391F91F9B000E825F3 /* HuffmanResponse.swift in Sources */,
 				7175EF601F5AAAB5007A73AF /* Button.swift in Sources */,
+				CE6088802004C7970057094C /* CoderTableViewCell.swift in Sources */,
 				71D2C2361F91F95600E825F3 /* HuffmanSession.swift in Sources */,
 				7175EF5A1F5AA93F007A73AF /* DestinationImageView.swift in Sources */,
 				714694411F5AF413007E2555 /* DestinationEncoderView.swift in Sources */,
+				CE87747F200F2E170059057A /* DecodeViewController+UITableView.swift in Sources */,
 				7146943A1F5AEB29007E2555 /* DecoderViewController.swift in Sources */,
 				719B664D1F5AA0B3007BA408 /* AppDelegate.swift in Sources */,
 				7175EF501F5AA325007A73AF /* NSObjectExtension.swift in Sources */,
@@ -579,10 +666,27 @@
 				71D2C23B1F91F9E000E825F3 /* HuffmanRequest.swift in Sources */,
 				71A7A3DC1F5AB1B200A22496 /* DestinationFirstView.swift in Sources */,
 				71A7A3DF1F5ABCDD00A22496 /* InputDatasViewController.swift in Sources */,
+				CE6088832004C95D0057094C /* EncoderViewController+UITableView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE3C66C5202802F000218A57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3C66CC202802F100218A57 /* HuffmanCode_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE3C66CF202802F100218A57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 719B66481F5AA0B3007BA408 /* HuffmanCode-iOS */;
+			targetProxy = CE3C66CE202802F100218A57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		719B66551F5AA0B3007BA408 /* LaunchScreen.storyboard */ = {
@@ -708,11 +812,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = X25KZ54NYC;
 				INFOPLIST_FILE = "$(SRCROOT)/HuffmanCode-iOS/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yochio.HuffmanCode-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "893b0cb0-5a84-4655-88fe-1a510242545c";
+				PROVISIONING_PROFILE_SPECIFIER = ios_development_yochio;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
@@ -724,13 +832,59 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = X25KZ54NYC;
 				INFOPLIST_FILE = "$(SRCROOT)/HuffmanCode-iOS/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yochio.HuffmanCode-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "893b0cb0-5a84-4655-88fe-1a510242545c";
+				PROVISIONING_PROFILE_SPECIFIER = ios_development_yochio;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		CE3C66D0202802F100218A57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E296FA364F;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "HuffmanCode-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yochio.HuffmanCode-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HuffmanCode-iOS.app/HuffmanCode-iOS";
+			};
+			name = Debug;
+		};
+		CE3C66D1202802F100218A57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E296FA364F;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "HuffmanCode-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yochio.HuffmanCode-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HuffmanCode-iOS.app/HuffmanCode-iOS";
 			};
 			name = Release;
 		};
@@ -751,6 +905,15 @@
 			buildConfigurations = (
 				719B665C1F5AA0B3007BA408 /* Debug */,
 				719B665D1F5AA0B3007BA408 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE3C66D2202802F100218A57 /* Build configuration list for PBXNativeTarget "HuffmanCode-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE3C66D0202802F100218A57 /* Debug */,
+				CE3C66D1202802F100218A57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

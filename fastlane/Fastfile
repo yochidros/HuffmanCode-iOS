@@ -1,0 +1,53 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+require "yaml"
+
+default_platform(:ios)
+
+CONF = YAML.load_file('conf.yml')
+
+platform :ios do
+  before_all do
+    cocoapods
+    ENV["SLACK_URL"] = CONF["slack"]["webhookurl"]
+  end
+  
+  desc "Runs all the unit and ui test"
+  lane :test do
+    scan(
+      scheme: "HuffmanCode-iOS",
+      clean: true
+      )
+  end
+
+  desc "Push a new beta build to TestFlight"
+  lane :beta do
+    sigh
+    disable_automatic_code_signing(path: "HuffmanCode-iOS.xcodeproj")
+    gym(
+      xcargs: "CODE_SIGN_IDENTITY='iPhone Distribution: Yoshiki Miyazawa'"
+    )
+    enable_automatic_code_signing(path: "HuffmanCode-iOS.xcodeproj")
+    build_app(workspace: "HuffmanCode-iOS.xcworkspace", scheme: "HuffmanCode-iOS")
+    upload_to_testflight
+  end
+
+  after_all do |lane|
+    slack(message: "Succesfully")
+  end
+
+  error do |lane, exception|
+    slack(
+      message: exception.message,
+      success: false
+      )
+  end
+end
