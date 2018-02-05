@@ -24,7 +24,6 @@ class InputDatasViewController: UIViewController {
 extension InputDatasViewController: InputDatasView {
     func inputDatasView(_ view: UICollectionViewCell, datas: [String : Int]) {
         HuffmanViewModel().huffman_code(freq: datas)
-//        HuffmanModel.share.huffman_code(freq: datas)
         self.transition(to: DestinationResultView())
     }
 }

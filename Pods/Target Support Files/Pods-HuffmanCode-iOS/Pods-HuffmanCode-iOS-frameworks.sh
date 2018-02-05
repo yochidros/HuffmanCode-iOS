@@ -10,6 +10,7 @@ SWIFT_STDLIB_PATH="${DT_TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}"
 # was originally proposed here: https://lists.samba.org/archive/rsync/2008-February/020158.html
 RSYNC_PROTECT_TMP_FILES=(--filter "P .*.??????")
 
+
 install_framework()
 {
   if [ -r "${BUILT_PRODUCTS_DIR}/$1" ]; then
@@ -85,10 +86,19 @@ code_sign_if_enabled() {
 # Strip invalid architectures
 strip_invalid_archs() {
   binary="$1"
-  # Get architectures for current file
-  archs="$(lipo -info "$binary" | rev | cut -d ':' -f1 | rev)"
+  # Get architectures for current target binary
+  binary_archs="$(lipo -info "$binary" | rev | cut -d ':' -f1 | awk '{$1=$1;print}' | rev)"
+  # Intersect them with the architectures we are building for
+  intersected_archs="$(echo ${ARCHS[@]} ${binary_archs[@]} | tr ' ' '\n' | sort | uniq -d)"
+  # If there are no archs supported by this binary then warn the user
+  if [[ -z "$intersected_archs" ]]; then
+    echo "warning: [CP] Vendored binary '$binary' contains architectures ($binary_archs) none of which match the current build architectures ($ARCHS)."
+    STRIP_BINARY_RETVAL=0
+    return
+  fi
   stripped=""
   for arch in $archs; do
+
     if ! [[ "${ARCHS}" == *"$arch"* ]]; then
       # Strip non-valid architectures in-place
       lipo -remove "$arch" -output "$binary" "$binary" || exit 1
@@ -98,6 +108,7 @@ strip_invalid_archs() {
   if [[ "$stripped" ]]; then
     echo "Stripped $binary of architectures:$stripped"
   fi
+  STRIP_BINARY_RETVAL=1
 }
 
 

@@ -57,6 +57,10 @@ class InputDatasCollectionViewCell: UICollectionViewCell {
             assertLabel.alpha = 0.0
             delegate?.cellDidSelectCalcurate(self, datas: temp)
         }else {
+            assertLabel.text = """
+            ERROR:
+            Frequrency must be satisfied to 100 %
+            """
             assertLabel.alpha = 1.0
         }
     }

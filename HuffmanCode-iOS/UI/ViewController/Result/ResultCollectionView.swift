@@ -14,10 +14,9 @@ protocol ContentsViewDelegate:class {
 
 class ResultCollectionView: UICollectionView {
     weak var contentsDelegate: ContentsViewDelegate?
-    // TODO: sorted data
     var data: [String: Int] = [:] {
         didSet {
-            data.sorted{ $0.1 < $1.1 }.forEach { (k,_) in
+            data.sorted{ $0.0 < $1.0 }.forEach { (k,_) in
                 encode.append(k)
             }
             reloadData()
@@ -44,7 +43,6 @@ class ResultCollectionView: UICollectionView {
         dataSource = self
         delegate = self
         register(cellTypes: [ResultContentsCollectionViewCell.self,ResultToolsCollectionViewCell.self])
-        reloadData()
     }
 }
 
