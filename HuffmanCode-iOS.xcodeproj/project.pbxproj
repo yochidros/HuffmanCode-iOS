@@ -512,12 +512,6 @@
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
 					};
-					CE3C66C8202802F000218A57 = {
-						CreatedOnToolsVersion = 9.2;
-						DevelopmentTeam = E296FA364F;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 719B66481F5AA0B3007BA408;
-					};
 				};
 			};
 			buildConfigurationList = 719B66441F5AA0B3007BA408 /* Build configuration list for PBXProject "HuffmanCode-iOS" */;
@@ -812,15 +806,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = X25KZ54NYC;
 				INFOPLIST_FILE = "$(SRCROOT)/HuffmanCode-iOS/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yochio.HuffmanCode-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "893b0cb0-5a84-4655-88fe-1a510242545c";
-				PROVISIONING_PROFILE_SPECIFIER = ios_development_yochio;
+				PROVISIONING_PROFILE = "43640158-4656-45e2-8b36-ee4f45b61a37";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.yochio.HuffmanCode-iOS";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
@@ -832,15 +825,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = X25KZ54NYC;
 				INFOPLIST_FILE = "$(SRCROOT)/HuffmanCode-iOS/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yochio.HuffmanCode-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "893b0cb0-5a84-4655-88fe-1a510242545c";
-				PROVISIONING_PROFILE_SPECIFIER = ios_development_yochio;
+				PROVISIONING_PROFILE = "43640158-4656-45e2-8b36-ee4f45b61a37";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.yochio.HuffmanCode-iOS";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
