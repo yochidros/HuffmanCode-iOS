@@ -91,7 +91,7 @@
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBc-0E-DEX" customClass="Button" customModule="HuffmanCode_iOS" customModuleProvider="target">
                         <rect key="frame" x="60" y="89" width="96.5" height="40"/>
-                        <color key="backgroundColor" red="0.095280340894444426" green="0.87369791666666663" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.095280340894444426" green="0.56315104166666663" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="dPP-yw-u9e"/>
                         </constraints>

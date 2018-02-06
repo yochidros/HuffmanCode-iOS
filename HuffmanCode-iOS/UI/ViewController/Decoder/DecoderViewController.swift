@@ -33,6 +33,9 @@ class DecoderViewController: UIViewController {
     }
     
     @IBAction func didSelectDecode(_ sender: Any) {
+        if textField.isFirstResponder {
+            textField.resignFirstResponder()
+        }
         guard let text = textField.text else { return }
         if checkBinaryCode(text: text) {
             resultLabel.text =  HuffmanViewModel().decode(string: text)
@@ -52,5 +55,13 @@ class DecoderViewController: UIViewController {
             } else { flag = false }
         }
         return flag
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        if textField.isFirstResponder {
+            textField.resignFirstResponder()
+        }
     }
 }

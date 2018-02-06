@@ -76,6 +76,22 @@ class InputDatasCollectionViewCell: UICollectionViewCell {
         return total == 100
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        charactersTextFields.forEach { (textField) in
+            if textField.isFirstResponder {
+                textField.resignFirstResponder()
+            }
+        }
+        
+        frequencyTextFields.forEach { (textField) in
+            if textField.isFirstResponder {
+                textField.resignFirstResponder()
+            }
+        }
+    }
+    
 }
 
 extension InputDatasCollectionViewCell{
