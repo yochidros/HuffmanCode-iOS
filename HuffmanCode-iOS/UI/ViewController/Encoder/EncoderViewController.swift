@@ -31,6 +31,10 @@ class EncoderViewController: UIViewController {
     }
 
     @IBAction func didSelectEncode(_ sender: Any) {
+        if textField.isFirstResponder {
+            textField.resignFirstResponder()
+        }
+        
         var keys: [String] = []
         var text: String = ""
         var invalidText: String = ""
@@ -56,5 +60,13 @@ class EncoderViewController: UIViewController {
             return
         }
         resultLabel.text = "\(text)"
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        if textField.isFirstResponder {
+            textField.resignFirstResponder()
+        }
     }
 }
