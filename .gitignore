@@ -25,3 +25,4 @@ Podfile.lock
 *.swp
 !.gitkeep
 .DS_Store
+codesigndoc_exports
