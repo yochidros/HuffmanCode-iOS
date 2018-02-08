@@ -50,7 +50,7 @@
                             <constraint firstAttribute="height" constant="48" id="kQG-CA-N7Y"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
-                        <state key="normal" title="Calulate">
+                        <state key="normal" title="Calculate">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <userDefinedRuntimeAttributes>
