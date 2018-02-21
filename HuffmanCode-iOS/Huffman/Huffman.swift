@@ -1,5 +1,5 @@
 //
-//  Huffman3.swift
+//  Huffman.swift
 //  HuffmanCode-iOS
 //
 //  Created by 宮澤賢生 on 2017/09/24.
@@ -69,7 +69,7 @@ class HuffmanViewModel {
             tree["1"] = assign_code(nodes: nodes, label: childs[1], result: result, prefix: prefix + "1")
             HuffmanModel.share.tree = tree
             return ""
-        }else {
+        } else {
             HuffmanModel.share.result[label] = prefix
             return label
         }

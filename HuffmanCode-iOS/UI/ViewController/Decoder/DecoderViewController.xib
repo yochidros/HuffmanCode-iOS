@@ -37,13 +37,14 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLi-bo-idq" customClass="Button" customModule="HuffmanCode_iOS" customModuleProvider="target">
-                    <rect key="frame" x="87" y="356" width="200" height="48"/>
-                    <color key="backgroundColor" red="0.30269136520000001" green="1" blue="0.22759069400000001" alpha="1" colorSpace="calibratedRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLi-bo-idq" customClass="Button" customModule="HuffmanCode_iOS" customModuleProvider="target">
+                    <rect key="frame" x="87" y="371" width="200" height="48"/>
+                    <color key="backgroundColor" red="0.34342040713343475" green="0.80065779667820425" blue="0.23717996260974403" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="njd-Sw-SoI"/>
                         <constraint firstAttribute="height" constant="48" id="sYB-vi-Bj4"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <state key="normal" title="Decode">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
