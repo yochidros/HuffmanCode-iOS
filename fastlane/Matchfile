@@ -1,4 +1,4 @@
-git_url "git@github.com.yochidros:yochidros/Certificates.git"
+git_url ""
 
 type "development" # The default type, can be: appstore, adhoc, enterprise or development
 
@@ -7,6 +7,6 @@ type "development" # The default type, can be: appstore, adhoc, enterprise or de
 
 type "appstore"
 app_identifier ["com.yochio.HuffmanCode-iOS"]
-username "mm9.movement.trb@gmail.com"
+username ""
 # For all available options run `fastlane match --help`
 # Remove the # in the beginning of the line to enable the other options
